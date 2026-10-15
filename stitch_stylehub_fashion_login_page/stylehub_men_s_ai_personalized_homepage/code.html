@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#30312f","on-error-container":"#93000a","on-surface-variant":"#584046","on-secondary-fixed-variant":"#47464d","tertiary":"#00552c","on-secondary-fixed":"#1b1b21","inverse-on-surface":"#f2f0ed","tertiary-container":"#00703c","on-secondary":"#ffffff","surface-bright":"#fbf9f6","secondary":"#5e5e65","primary-fixed-dim":"#ffb1c3","surface-container-high":"#eae8e5","on-secondary-container":"#64636b","on-primary-container":"#ffd0d9","secondary-fixed-dim":"#c8c5cd","outline-variant":"#e0bec4","surface-container":"#efeeeb","inverse-primary":"#ffb1c3","error":"#ba1a1a","on-tertiary-container":"#7cf4a5","on-error":"#ffffff","tertiary-fixed-dim":"#64dd91","surface-dim":"#dbdad7","outline":"#8c7075","on-background":"#1b1c1a","on-tertiary-fixed-variant":"#00522b","background":"#fbf9f6","primary-container":"#b81d5b","primary":"#930044","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#00210e","on-primary-fixed":"#3f0019","tertiary-fixed":"#82faab","surface":"#fbf9f6","secondary-container":"#e4e1ea","on-primary":"#ffffff","surface-container-low":"#f5f3f0","on-primary-fixed-variant":"#8f0042","error-container":"#ffdad6","surface-variant":"#e4e2df","on-tertiary":"#ffffff","primary-fixed":"#ffd9e0","on-surface":"#1b1c1a","surface-tint":"#b51a59","surface-container-highest":"#e4e2df","secondary-fixed":"#e4e1ea"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-md":"1rem","margin-xl":"6rem","margin-md":"2rem","margin-lg":"4rem","gutter":"1.5rem","margin":"1.5rem","margin-sm":"1rem","space-2xl":"4rem","space-xl":"2.5rem","space-sm":"0.5rem","gutter-lg":"2rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter-sm":"1rem"},fontFamily:{"headline-xl-mobile":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"title-lg":["Plus Jakarta Sans"],"headline-xl":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"price-display":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"display-lg":["Playfair Display"]},fontSize:{"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"0","fontWeight":"500"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-lg":["18px",{"lineHeight":"24px","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"500"}],"price-display":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"22px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-surface-container-high text-on-surface-variant font-label-md text-label-md px-margin-sm md:px-margin-lg h-9 flex items-center justify-between"><div class="flex items-center gap-space-sm overflow-hidden whitespace-nowrap"><span class="material-symbols-outlined text-primary text-[14px]">auto_awesome</span><span>Free Express Delivery on orders above ₹499 • AI Personal Stylist Active • 100% Safe Payments</span></div><div class="hidden sm:flex items-center gap-space-xs font-label-sm text-label-sm"><button class="bg-primary text-on-primary px-space-sm py-0.5 rounded-full font-label-sm text-label-sm">Men</button><span class="text-outline">|</span><button class="text-on-surface-variant hover:text-on-surface px-space-sm py-0.5 rounded-full font-label-sm text-label-sm transition-colors">Women</button></div></div><div class="h-20 max-w-[1440px] mx-auto px-margin-sm md:px-margin-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><button aria-label="Open Menu" class="p-space-xs text-on-surface hover:bg-surface-container rounded-lg transition-colors lg:hidden"><span class="material-symbols-outlined text-[26px]">menu</span></button><a class="flex items-center gap-space-sm group" href="#"><div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm group-hover:bg-primary transition-colors"><span class="material-symbols-outlined text-[22px]">shopping_bag</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight leading-none">StyleHub</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase mt-0.5">Fashion for a brighter you</span></div></a></div><div class="hidden xl:flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer"><span class="material-symbols-outlined text-primary text-[20px]">location_on</span><div class="flex flex-col leading-tight"><span class="font-label-sm text-label-sm text-on-surface-variant">Deliver to</span><span class="font-title-md text-body-sm font-semibold text-on-surface">Rahul • Mumbai 400050</span></div></div><div class="flex-1 max-w-xl mx-space-sm hidden md:block"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none text-[20px]">search</span><input class="w-full h-12 pl-11 pr-24 bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md font-body-md rounded-lg shadow-[0_1px_4px_rgba(0,0,0,0.04)] focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-transparent transition-all" placeholder="Search for slim shirts, linen blazers, sneakers..." type="text"/><div class="absolute right-space-sm flex items-center gap-space-xs text-on-surface-variant"><button class="p-1.5 hover:bg-surface-container rounded-full text-outline hover:text-primary transition-colors" title="Voice Search"><span class="material-symbols-outlined text-[18px]">mic</span></button><button class="p-1.5 hover:bg-surface-container rounded-full text-outline hover:text-primary transition-colors" title="Visual AI Search"><span class="material-symbols-outlined text-[18px]">photo_camera</span></button></div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><a class="relative p-2.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-full transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[24px]">favorite</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-primary text-on-primary font-label-sm text-[9px] flex items-center justify-center font-bold">3</span></a><a class="relative p-2.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-full transition-colors" data-path="cart" href="#"><span class="material-symbols-outlined text-[24px]">local_mall</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-primary-container text-on-primary font-label-sm text-[9px] flex items-center justify-center font-bold">2</span></a></div><div class="h-8 w-[1px] bg-surface-container-highest hidden sm:block"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden text-right lg:flex flex-col"><span class="font-label-md text-label-md text-on-surface font-semibold">Hi, Rahul</span><span class="font-label-sm text-[10px] text-tertiary-container font-semibold tracking-wider uppercase">Men's Profile</span></div><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1W6mbxkMzq2Zy8x7hD9O_sQ0c0bfvHSmJRWuh-YRD5ReR6LSpv2ahNxPkUANpumAE-wnz66sU_MPq4hY3b3JAcP6DAUKA_O0oGqY3vPJGUDFDauNSXOw3Oqv0GgaVlVeDMBgIrRpAQ-qCaXbVEbLQSa1p_VuEM2hYkGYIQnEWQkVNyk-5AxRGO5dkLB-zFfoqIk9oQntuKmon5SCAmh7t5WWelMXkHn0GTm6eJzoI2juCIOEZB7m15QF7km"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary-container ring-2 ring-surface"></span></div></div></div></div><div class="bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.03)] overflow-x-auto"><div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin-lg"><nav class="flex items-center gap-space-lg whitespace-nowrap h-11" data-active-classes="text-primary font-bold border-b-2 border-primary"><a aria-current="page" class="h-full flex items-center gap-1 transition-colors text-primary font-bold border-b-2 border-primary" data-path="ai-curated-for-you" href="#"><span class="material-symbols-outlined text-[16px] text-primary">auto_awesome</span>For You (AI Curated)</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md h-full flex items-center transition-colors" data-path="new-arrivals" href="#">New Arrivals</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md h-full flex items-center transition-colors" data-path="shirts-and-polos" href="#">Shirts &amp; Polos</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md h-full flex items-center transition-colors" data-path="trousers-and-chinos" href="#">Trousers &amp; Chinos</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md h-full flex items-center transition-colors" data-path="blazers-and-jackets" href="#">Blazers &amp; Jackets</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md h-full flex items-center transition-colors" data-path="footwear-and-sneakers" href="#">Footwear &amp; Sneakers</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md h-full flex items-center transition-colors" data-path="watches-and-accessories" href="#">Watches &amp; Accessories</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md h-full flex items-center transition-colors" data-path="summer-linen-edit" href="#">Summer Linen Edit</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md h-full flex items-center gap-1 transition-colors" data-path="style-ai-studio" href="#"><span class="material-symbols-outlined text-[16px] text-primary-container">magic_button</span>Style AI Studio</a></nav></div></div></header><main class="w-full pt-[155px] bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Gender Logic Simulation Top Toast / Diagnostics Bar -->
+<div class="w-full bg-surface-container-high/70 backdrop-blur-md py-2.5 px-margin-sm md:px-margin-lg">
+<div class="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-3 font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold tracking-wide uppercase">
+          Profile Sync
+        </span>
+<span class="text-on-surface font-title-md text-body-sm font-medium">
+          Context: <code class="px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-mono text-[11px]">user.gender = "male" (Active)</code>
+</span>
+<span class="hidden md:inline text-on-surface-variant text-body-sm">• Personalization Engine: Casual Sophistication / Mumbai Edit</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Switch Persona View:</span>
+<div class="inline-flex rounded-full bg-surface-container p-0.5">
+<button class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-all duration-200" id="btn-male" onclick="setGenderView('male')">
+            Men's (Active)
+          </button>
+<button class="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all duration-200" id="btn-female" onclick="setGenderView('female')">
+            Women's Studio
+          </button>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] w-full mx-auto px-margin-sm md:px-margin-lg space-y-space-2xl pb-space-2xl">
+<!-- 1. Top Personalized Hero Section -->
+<section class="relative pt-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Left Editorial Narrative -->
+<div class="lg:col-span-6 flex flex-col items-start gap-space-md">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<span class="font-semibold text-primary">AI Style Profile Active</span>
+<span class="text-outline-variant">•</span>
+<span>Casual Sophistication</span>
+</div>
+<div class="space-y-space-xs">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+              Style That Fits You, <span class="text-primary italic font-headline-xl">Rahul</span>
+</h1>
+<p class="font-headline-md text-headline-md text-primary-container italic font-normal tracking-wide">
+              Your personalized wardrobe, refreshed today ♡
+            </p>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+            Based on your recent interest in Mediterranean summer silhouettes and breathable linen casuals, your AI assistant curated <strong class="text-on-surface font-semibold">18 new looks</strong> with a verified 95%+ fit match for Mumbai's climate.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center gap-2 px-space-lg py-3.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container transition-colors duration-200" href="#recommended-for-you">
+<span>Shop For You</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<button class="inline-flex items-center gap-2 px-space-lg py-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container transition-colors duration-200" onclick="toggleQuizModal()">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span>Refine My Style Quiz</span>
+</button>
+</div>
+<!-- Quick Micro-Pills for User Fit Parameters -->
+<div class="pt-space-sm flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Size: <strong>M (Chest 39")</strong></span>
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Waist: <strong>32 Reg</strong></span>
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Palette: <strong>Warm Sand, Mist, Navy</strong></span>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed font-label-sm text-label-sm text-on-tertiary-fixed font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Perfect Fit Guarantee
+            </span>
+</div>
+</div>
+<!-- Right Hero Visual Banner -->
+<div class="lg:col-span-6 relative">
+<div class="relative w-full rounded-2xl overflow-hidden bg-surface-container-low shadow-xl">
+<div class="aspect-[4/5] w-full relative">
+<img alt="Rahul wearing coastal open black linen shirt, white tee and tailored pleated beige trousers" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida/AEtjO1W6mbxkMzq2Zy8x7hD9O_sQ0c0bfvHSmJRWuh-YRD5ReR6LSpv2ahNxPkUANpumAE-wnz66sU_MPq4hY3b3JAcP6DAUKA_O0oGqY3vPJGUDFDauNSXOw3Oqv0GgaVlVeDMBgIrRpAQ-qCaXbVEbLQSa1p_VuEM2hYkGYIQnEWQkVNyk-5AxRGO5dkLB-zFfoqIk9oQntuKmon5SCAmh7t5WWelMXkHn0GTm6eJzoI2juCIOEZB7m15QF7km"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+<!-- Top floating match pill -->
+<div class="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-md">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-tertiary">98% AI Match</span>
+</div>
+<div class="absolute top-4 right-4">
+<button aria-label="Save outfit" class="w-10 h-10 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center text-primary shadow-md hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- Bottom Overlay Narrative Card -->
+<div class="absolute bottom-4 left-4 right-4 p-space-md rounded-xl bg-surface-container-lowest/95 backdrop-blur-lg shadow-lg">
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-primary">Rahul's Signature Look #04</span>
+<h2 class="font-title-lg text-title-lg text-on-surface">The Coastal Terrace Linen Ensemble</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Black Slub Overshirt + Supima Tee + Sand Pleated Chino</p>
+</div>
+<a class="w-11 h-11 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow hover:bg-primary-container transition-colors" href="#complete-look">
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Cursive Tag floating outside -->
+<div class="hidden xl:block absolute -bottom-6 -left-8 transform -rotate-6 pointer-events-none">
+<span class="font-headline-md text-headline-md text-primary drop-shadow italic bg-surface-container-lowest px-4 py-2 rounded-full shadow-md">
+              Curated for Rahul ♡
+            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Benefits Strip -->
+<section class="w-full">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter rounded-2xl bg-surface-container-low p-space-lg shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[26px]">local_shipping</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface leading-tight">Free Delivery</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">On orders above ₹499</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[26px]">assignment_return</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface leading-tight">Easy Returns</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">7-day doorstep pickup</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[26px]">verified_user</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface leading-tight">Secure Payments</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">100% encrypted checkout</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[26px]">psychology</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface leading-tight">AI Stylist</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">24/7 Smart fit predictor</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. "Recommended For You" (AI Match Showcase) -->
+<section class="space-y-space-lg" id="recommended-for-you">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<div class="inline-flex items-center gap-1.5 text-primary font-label-md text-label-md font-semibold tracking-wider uppercase mb-1">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+            High Affinity Match
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Recommended For You</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Calibrated to your exact size (<span class="font-semibold text-on-surface">M / 32</span>) and color favorites (<span class="font-semibold text-on-surface">Navy, Warm Sand, Olive Mist</span>).
+          </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors">
+            All Fits
+          </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors">
+            Shirts
+          </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors">
+            Pants
+          </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors">
+            Sneakers
+          </button>
+</div>
+</div>
+<!-- 4 Rich Product Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product 1 -->
+<article class="group rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative aspect-[3/4] w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Editorial men's fashion photo of an Italian linen resort shirt in soft olive mist green, open collar, draped with organic fabric textures in warm sunlit architectural setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn2Q96mLb08_Fg7WkRnwidwGBZLEjVme9g__K5cpozALACbmDuxvUruEpmrh8BQO4nk5kubc-X3VLUZMfAwwY-7o6TZEBGsbNU3MF6c-lIZoRWgns6LOLkagQpi1Hs97mF_dRFCy4xcdcRXR8vO8Y0ravr1CEdkB-HoqIQ4-ztnEorrJliwQDHCNR5N-SDcniaaeFJifrVKNB-eha-Y1oJaFY17uSfFv8_GjD1sxRieO4P1wSD3jp0yw"/>
+<div class="absolute top-3 left-3 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm font-semibold shadow-sm">
+<span>✦ 99% AI Match</span>
+</div>
+<button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 right-3 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-md hover:bg-primary-container transition-colors flex items-center justify-center gap-1.5" onclick="addToBagNotification('Italian Linen Resort Shirt')">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span> Add to Bag
+              </button>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between space-y-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Bespoke Casuals</span>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Italian Linen Resort Shirt</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Olive Mist • Relaxed Tailored</p>
+</div>
+<div class="pt-space-xs">
+<div class="flex items-baseline gap-2">
+<span class="font-price-display text-price-display text-on-surface">₹2,499</span>
+<span class="font-body-sm text-body-sm line-through text-outline">₹4,999</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">50% OFF</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center text-primary-container text-body-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold ml-1 text-on-surface">4.9</span>
+<span class="text-outline text-body-sm ml-1">(340)</span>
+</div>
+<span class="font-label-sm text-[11px] text-tertiary-container font-medium">In your size (M)</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Product 2 -->
+<article class="group rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative aspect-[3/4] w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Editorial men's tailored trousers in warm sand beige fabric with crisp double front pleats and side tab adjusters on an editorial fashion model in a luxury penthouse setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4gg7uQHNdsb9llkjg4ae2KR2QFgnkuJI4UehuURofDNKMyTMepumb6y_PJX4Lwv0P-iX9eM4o3DyzUnhLcCSdYJe5UXXE_5LQbHw0pboqb1QkmgEDABGpgeOlo7U7LSHPzs5ROKv4o1OJ-mMQRJOJUXg0wE0tNlMe6OqCsOb-Uoz2hJJm9SCwldfOEa80l2F8SHdAGO3INIhUBp0dEE3kT0yU03ME73Gs1kS_SY8gtsxbtEu4BSbQZg"/>
+<div class="absolute top-3 left-3 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm">
+<span>✦ 97% AI Match</span>
+</div>
+<button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-primary shadow-sm hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 right-3 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-md hover:bg-primary-container transition-colors flex items-center justify-center gap-1.5" onclick="addToBagNotification('Tailored Pleated Trousers')">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span> Add to Bag
+              </button>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between space-y-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Trousers &amp; Chinos</span>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Tailored Pleated Trousers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Warm Sand • Tapered Crop</p>
+</div>
+<div class="pt-space-xs">
+<div class="flex items-baseline gap-2">
+<span class="font-price-display text-price-display text-on-surface">₹2,899</span>
+<span class="font-body-sm text-body-sm line-through text-outline">₹4,499</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">35% OFF</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center text-primary-container text-body-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold ml-1 text-on-surface">4.8</span>
+<span class="text-outline text-body-sm ml-1">(182)</span>
+</div>
+<span class="font-label-sm text-[11px] text-tertiary-container font-medium">In your waist (32)</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Product 3 -->
+<article class="group rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative aspect-[3/4] w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Editorial close-up product photograph of premium chalk white minimalist leather low-top sneakers resting on a warm marble pedestal with soft warm natural shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr3Jj2rGrAF6P5_7FhVcJFYjuZhs3aTTC72MJyUXh0E7LU4dVCboQKzcbGEUfslvhoh9BwOZ20OkruP-C7F3Z1Y8pnesyo2azjbUlYYNk6nH4HuduSYjx6GkrqOKqfPwLmy51Bz2AB5v7jrDoqHsoL0337HCYUg3T7i0nW3t0opW0JPMDrk7igdv7OhgLRxHROxjCPf6CdcwHFmPMAfAOlTGs_DZdC7E6hEnTZp14woeo5vdtKpxaxwQ"/>
+<div class="absolute top-3 left-3 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm">
+<span>✦ 96% AI Match</span>
+</div>
+<button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-primary shadow-sm hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 right-3 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-md hover:bg-primary-container transition-colors flex items-center justify-center gap-1.5" onclick="addToBagNotification('Minimalist Leather Low-Tops')">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span> Add to Bag
+              </button>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between space-y-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Footwear &amp; Sneakers</span>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Minimalist Leather Low-Tops</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chalk White • Calfskin Nappa</p>
+</div>
+<div class="pt-space-xs">
+<div class="flex items-baseline gap-2">
+<span class="font-price-display text-price-display text-on-surface">₹3,999</span>
+<span class="font-body-sm text-body-sm line-through text-outline">₹6,999</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">42% OFF</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center text-primary-container text-body-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold ml-1 text-on-surface">4.9</span>
+<span class="text-outline text-body-sm ml-1">(512)</span>
+</div>
+<span class="font-label-sm text-[11px] text-tertiary-container font-medium">Size UK 9 Available</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Product 4 -->
+<article class="group rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative aspect-[3/4] w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Editorial men's fashion photo of an unstructured cotton linen blazer in deep navy blue with natural horn buttons worn casually by a man in an Italian villa courtyard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC4Fo7pXyrxfbwHGDH7lVtjArFjruGr0ZoVjU8b4RmyYIGJpfd15AQIGnaktJTqCYDkjUpGhL2NH2PRshfj51mlguabad3E7G5Bh8nO74bXhmnnfE_qVouQHgQN3U92nuNyU8E9pY5iEF4roSdNfeV5VISpGIxn0C-gOLNp6WTF-EkKl2bWgmSjVQHV_0lYiyhN_osu9tDLyP35ACFw1o3NDe2Ub6TLT8wgjMccRlxCpe4zqL-_z_PHg"/>
+<div class="absolute top-3 left-3 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold shadow-sm">
+<span>✦ 95% AI Match</span>
+</div>
+<button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-primary shadow-sm hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 right-3 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-md hover:bg-primary-container transition-colors flex items-center justify-center gap-1.5" onclick="addToBagNotification('Unstructured Cotton-Linen Blazer')">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span> Add to Bag
+              </button>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between space-y-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Jackets &amp; Tailoring</span>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Unstructured Cotton Blazer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deep Navy • Breathable Half-Lined</p>
+</div>
+<div class="pt-space-xs">
+<div class="flex items-baseline gap-2">
+<span class="font-price-display text-price-display text-on-surface">₹5,499</span>
+<span class="font-body-sm text-body-sm line-through text-outline">₹8,999</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">38% OFF</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center text-primary-container text-body-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold ml-1 text-on-surface">4.8</span>
+<span class="text-outline text-body-sm ml-1">(94)</span>
+</div>
+<span class="font-label-sm text-[11px] text-tertiary-container font-medium">Chest 40 Fit</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- 4. "Because You Viewed: Coastal Linen Over-Shirts" -->
+<section class="space-y-space-md bg-surface-container-low p-space-lg rounded-2xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">history</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Browsing Context Affinity</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Because You Viewed: Coastal Linen Over-Shirts</h2>
+</div>
+</div>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container flex items-center gap-1 font-semibold" href="#">
+          Explore All Layering Pieces <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-[4/5] rounded-lg overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Editorial men's black relaxed overshirt worn over white tee with tortoise sunglasses in natural warm outdoor lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDixg-TU_DfWC_1zJWUWKy-u6rqhOrgQ5h2f5W5bx5M589kthcegHtf_ey7_hfUwFozlS0YYKaB__LfcJM7aSUeIq0YJy4UQBggZFC-kRvgBUsnfx5FtN5ubBGh8B4rxSj7sbXenIDF9FXxL5PWw1XpKC1cJTvG9fDFo65v6-AFpDEUWwXJ-eK9CZQCexXVtK3u8GPAOrVTs3CIREf-kUlskP4SHFimJhSvHVDjpRFqkp-t3Odqo2AmiQ"/>
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 px-2 py-0.5 rounded font-label-sm text-[10px] font-bold text-on-surface">94% MATCH</span>
+</div>
+<div class="pt-space-sm space-y-1">
+<h4 class="font-title-md text-body-md font-semibold text-on-surface truncate">Black Relaxed Slub Overshirt</h4>
+<div class="flex items-baseline gap-2">
+<span class="font-title-md text-body-md font-bold text-on-surface">₹2,199</span>
+<span class="font-body-sm text-[12px] line-through text-outline">₹3,699</span>
+<span class="font-label-sm text-[11px] text-primary font-bold">40% OFF</span>
+</div>
+<button class="w-full mt-2 py-1.5 rounded bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm font-semibold transition-colors" onclick="addToBagNotification('Black Relaxed Slub Overshirt')">
+              Quick Add
+            </button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-[4/5] rounded-lg overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Clean studio shot of folded organic Pima cotton crewneck t-shirts in off-white and chalk tones with tactile cotton thread detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZqipr9MjrYolMssRuJhgdsUfIrhmdek2Vz2b5FencQAzFUg_3RwMDbNcaAn_1fcUBM4tmcf90Zh5fI_IiZ2jtRj_RlmGfTULJQSPY-vX-dYHTwbu4hXyX4Igxg5vefTopaW-MXb-L3ehzedf9CNxGl5-B5tQlweugrQQIxR4_FeQryymYHCmIdLj6yHvYcRnKMEcJQmAVQ_uA9XZvuEA-CnSasJBMhDhw3nitKQi3IIvZP6KqUh4sMQ"/>
+<span class="absolute top-2 left-2 bg-tertiary px-2 py-0.5 rounded font-label-sm text-[10px] font-bold text-on-tertiary">98% MATCH</span>
+</div>
+<div class="pt-space-sm space-y-1">
+<h4 class="font-title-md text-body-md font-semibold text-on-surface truncate">Organic Pima Crewneck (Pack of 2)</h4>
+<div class="flex items-baseline gap-2">
+<span class="font-title-md text-body-md font-bold text-on-surface">₹1,499</span>
+<span class="font-body-sm text-[12px] line-through text-outline">₹2,199</span>
+<span class="font-label-sm text-[11px] text-primary font-bold">30% OFF</span>
+</div>
+<button class="w-full mt-2 py-1.5 rounded bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm font-semibold transition-colors" onclick="addToBagNotification('Organic Pima Crewneck Pack')">
+              Quick Add
+            </button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-[4/5] rounded-lg overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Editorial men's vintage tortoise shell polarized sunglasses with green polarized lenses displayed on warm raw travertine stone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdJPyiRxefRL2SDtjoczdyh3gpUKCr1ZNfXc-sC4CDBtDN7JE5RDjZmUE-QXle0v2FHLbbCcc2ZJUbMxv9a0Ynv2uB93-7lzS5Gl0g6ldNtAZ04WwbkFsRofzf0O-WrGCjA7fbMBlt7ZcQ2oGrRw14n8-ONz3KnIL1KT1SpydcQcCXkucZlw-CXlkCoN9ik6E54sBgM8UkwkskNgy1oFdiXJSbeRS5lMpXllfsP_GSXIABcSFRfDHfsg"/>
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 px-2 py-0.5 rounded font-label-sm text-[10px] font-bold text-on-surface">92% MATCH</span>
+</div>
+<div class="pt-space-sm space-y-1">
+<h4 class="font-title-md text-body-md font-semibold text-on-surface truncate">Vintage Tortoise Sunglasses</h4>
+<div class="flex items-baseline gap-2">
+<span class="font-title-md text-body-md font-bold text-on-surface">₹1,899</span>
+<span class="font-body-sm text-[12px] line-through text-outline">₹3,799</span>
+<span class="font-label-sm text-[11px] text-primary font-bold">50% OFF</span>
+</div>
+<button class="w-full mt-2 py-1.5 rounded bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm font-semibold transition-colors" onclick="addToBagNotification('Vintage Tortoise Sunglasses')">
+              Quick Add
+            </button>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-[4/5] rounded-lg overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Editorial handcrafted Italian braided leather belt in rich chestnut brown with brushed silver buckle laid flat on linen fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6GeKLUCLsuFBfAPCAWv1LVbv8VGq0ksPKe0wOPYItrSwtEAwo_fW743IHuhRPg6pC0VC0GW0nGdjICGDXWZDblgvRqFbQ7OcZEw9Evn1P2VTtoypwOOY5JqV2EfacOxJib8jtlCmpihNS2GpZfk84keurfBB6WxlUAi945g2ETROPrSGgfessl5z0kog_Dik7dYh7VM53l8DFmJgCs4E6liqS8DV9tzyUI62TnRO2RZ8-Hn0hk7NvSw"/>
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 px-2 py-0.5 rounded font-label-sm text-[10px] font-bold text-on-surface">91% MATCH</span>
+</div>
+<div class="pt-space-sm space-y-1">
+<h4 class="font-title-md text-body-md font-semibold text-on-surface truncate">Woven Braided Leather Belt</h4>
+<div class="flex items-baseline gap-2">
+<span class="font-title-md text-body-md font-bold text-on-surface">₹1,299</span>
+<span class="font-body-sm text-[12px] line-through text-outline">₹1,749</span>
+<span class="font-label-sm text-[11px] text-primary font-bold">25% OFF</span>
+</div>
+<button class="w-full mt-2 py-1.5 rounded bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm font-semibold transition-colors" onclick="addToBagNotification('Woven Braided Leather Belt')">
+              Quick Add
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. "Trending For You" (What Men in Mumbai are Wearing Now) -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary">Live Regional Demand</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Trending in Mumbai Right Now</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Real-time style spikes filtered for humidity-friendly drape and casual boardroom utility.</p>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Updated 14 mins ago</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Trend 1 -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-lg transition-all p-space-md flex flex-col justify-between h-72">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-bold">
+                +142% this week
+              </span>
+<span class="material-symbols-outlined text-primary text-[20px]">trending_up</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Breathable Open-Weave Knits</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cotton-boucle textures pairing easily with tailored shorts or chinos.</p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">42 Curated Items</span>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Trend 2 -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-lg transition-all p-space-md flex flex-col justify-between h-72">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-bold">
+                +89% this week
+              </span>
+<span class="material-symbols-outlined text-primary text-[20px]">trending_up</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Relaxed Wide-Leg Chinos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The shift to drape: mid-rise, single pleat lightweight twill.</p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">28 Curated Items</span>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Trend 3 -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-lg transition-all p-space-md flex flex-col justify-between h-72">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-bold">
+                +115% this week
+              </span>
+<span class="material-symbols-outlined text-primary text-[20px]">trending_up</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Cuban Camp Collar Polos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Subtle retro collar lines executed in crisp slub cotton.</p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">36 Curated Items</span>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Trend 4 -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-lg transition-all p-space-md flex flex-col justify-between h-72">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-bold">
+                +74% this week
+              </span>
+<span class="material-symbols-outlined text-primary text-[20px]">trending_up</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Clean Chronographs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Saddle leather straps with minimalist cream dials.</p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">19 Curated Items</span>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. "Complete Your Look" (Interactive AI Outfit Builder) -->
+<section class="rounded-2xl bg-surface-container-lowest p-space-lg md:p-space-xl shadow-md" id="complete-look">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Visual composite -->
+<div class="lg:col-span-5 relative">
+<div class="rounded-xl overflow-hidden bg-surface-container-low shadow-sm">
+<div class="aspect-[3/4] w-full relative">
+<img alt="Full ensemble worn by model on terrace" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1W6mbxkMzq2Zy8x7hD9O_sQ0c0bfvHSmJRWuh-YRD5ReR6LSpv2ahNxPkUANpumAE-wnz66sU_MPq4hY3b3JAcP6DAUKA_O0oGqY3vPJGUDFDauNSXOw3Oqv0GgaVlVeDMBgIrRpAQ-qCaXbVEbLQSa1p_VuEM2hYkGYIQnEWQkVNyk-5AxRGO5dkLB-zFfoqIk9oQntuKmon5SCAmh7t5WWelMXkHn0GTm6eJzoI2juCIOEZB7m15QF7km"/>
+<div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md font-label-sm text-label-sm font-bold text-primary shadow">
+                ★ 98% Compatibility Score
+              </div>
+</div>
+</div>
+<div class="absolute -bottom-4 -right-4 bg-primary text-on-primary p-3 rounded-xl shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">auto_fix_high</span>
+<span class="font-label-md text-label-md font-bold">StyleHub AI Composite #04</span>
+</div>
+</div>
+<!-- Bundle Configuration & Breakdown -->
+<div class="lg:col-span-7 space-y-space-md">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-primary">Interactive Outfit Builder</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">The Sun-Drenched Terrace Ensemble</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Specially synthesized by AI to combine complementary silhouettes, textures, and tonalities tailored specifically for Rahul's dimensions.
+            </p>
+</div>
+<!-- The 3 Bundled Items -->
+<div class="space-y-2">
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<div>
+<h4 class="font-title-md text-body-md font-semibold text-on-surface">Resort Black Slub Overshirt</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Size: M • 100% Breathable Cotton Slub</p>
+</div>
+</div>
+<span class="font-title-md text-body-md font-bold text-on-surface">₹2,199</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<div>
+<h4 class="font-title-md text-body-md font-semibold text-on-surface">Chalk White Supima Crewneck</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Size: M • 220 GSM Dense Drape</p>
+</div>
+</div>
+<span class="font-title-md text-body-md font-bold text-on-surface">₹799</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<div>
+<h4 class="font-title-md text-body-md font-semibold text-on-surface">Warm Sand Pleated Chinos</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Waist: 32 • Relaxed Tailored Hem</p>
+</div>
+</div>
+<span class="font-title-md text-body-md font-bold text-on-surface">₹2,899</span>
+</div>
+</div>
+<!-- Pricing summary banner -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-body-md text-body-md text-on-surface-variant">Combined Retail:</span>
+<span class="line-through text-outline font-title-md text-title-md">₹5,897</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-primary">Bundle Price: ₹4,999</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-bold">Extra 15% AI Bundle Savings</span>
+</div>
+</div>
+<button class="px-space-lg py-3 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-semibold shadow-md hover:bg-primary-container transition-all flex items-center justify-center gap-2" id="bundle-btn" onclick="addBundleToBag()">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span>Add Entire Look to Bag (3 Items)</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. "Personalized Deals (Exclusive for Rahul)" -->
+<section class="space-y-space-md">
+<div class="p-space-lg md:p-space-xl rounded-2xl bg-gradient-to-r from-primary to-primary-container text-on-primary shadow-lg relative overflow-hidden">
+<div class="relative z-10 max-w-2xl space-y-space-xs">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md font-label-sm text-label-sm font-semibold tracking-wide">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+<span>VIP MEN'S ACCESS FOR RAHUL</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl leading-tight">
+            Extra 20% Off All Tailored Fits &amp; Linens
+          </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container">
+            Use code <code class="px-2.5 py-1 rounded bg-surface-container-lowest text-primary font-mono font-bold">STYLEMEN20</code> at checkout. Automatically applies to all algorithmically matching garments in your cart.
+          </p>
+<div class="pt-space-xs flex items-center gap-space-md">
+<div class="flex items-center gap-2 text-on-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[20px]">timer</span>
+<span>Offer expires in: <span class="font-mono font-bold tracking-wider" id="countdown">11h : 42m : 18s</span></span>
+</div>
+</div>
+</div>
+<!-- Background subtle graphic decoration -->
+<div class="absolute right-0 top-0 bottom-0 w-1/3 opacity-10 pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[260px]">local_mall</span>
+</div>
+</div>
+<!-- 3 Flash Deal Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
+<div class="w-20 h-24 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Product photo of men's knitted sage green short sleeve polo shirt on neutral minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1smwMBbL135QFqk5kD4YoXQ2Cz0W7vWp3tAnSODC-28jKLCIDYI1uUyR0VI4tz4g3YzsT_slva9PoifuYrumq7bVdhb0swGRU-1ucIdbkzQn3jWWI7E7bYDJMPg7MMs2g0OaeJHKEDrDdb9JVMWLh5d8G2LVVn05C2Psk_tB_0mnxqrGTziQW7YQXnQhY7qSMBxkD-LeXHv0RFA_t7GF38StVxYmmnrNNO4EwAxO9sglxIU52cH5zdA"/>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-bold">FLASH DROP</span>
+<h4 class="font-title-md text-body-md font-semibold text-on-surface truncate">Knitted Sage Polo</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Now ₹1,699 <span class="line-through text-outline">₹2,999</span></p>
+<button class="mt-2 text-primary font-label-sm text-label-sm font-bold flex items-center gap-1 hover:underline" onclick="addToBagNotification('Knitted Sage Polo')">
+              Grab Deal <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
+<div class="w-20 h-24 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Editorial image of men's sand colored linen drawstring lounge trousers styled casually." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLKeNlRg8a7N5b3BottmxlXawP-LNCawmDV8YHv7XIA_RXlRFdkuRxdOzEbheKyqegLnrINEddsUJJP-ARU_58SLI-8XWnH-uEPwOsKNCLJYq8nWtlxIPuIfqkBx107VTcfcK_3_gKFx-jZ9yhPI0EYRL4ozT97oq07uQwno6OsW7avo45jMMk7KvwagO9PkkGZO5UUtFGQ726Ye26x3XN2ChRaGVnuYgNCibWXmCGTK_uRPNcIssrrA"/>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-bold">FLASH DROP</span>
+<h4 class="font-title-md text-body-md font-semibold text-on-surface truncate">Linen Drawstring Chino</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Now ₹2,299 <span class="line-through text-outline">₹3,999</span></p>
+<button class="mt-2 text-primary font-label-sm text-label-sm font-bold flex items-center gap-1 hover:underline" onclick="addToBagNotification('Linen Drawstring Chino')">
+              Grab Deal <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
+<div class="w-20 h-24 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Editorial product shot of Italian suede penny loafers in rich caramel tan resting on polished stone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgRf746RkolbgmWlMhBgdy-xJExXaLcQGABPKCQB6TQ8REtcDBcBJw82isXZCus9T-aPiqB0huLKJumQmkqMqLAWDivH0990Sd5kF2JPab8rcrv5hsx8axy3KFa4EnJ7u1PhPMf_yrYty6JeQEMg8nVWdX4njq19WHl2vCggdoZt3mtT9bmG_O1PWO6MvG93eMfxOigLpDIY12OecK6HeFDDvmY11ooKnalt7IYqXPJ__k9abRjYI2Rw"/>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-bold">FLASH DROP</span>
+<h4 class="font-title-md text-body-md font-semibold text-on-surface truncate">Suede Penny Loafers</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Now ₹3,799 <span class="line-through text-outline">₹6,499</span></p>
+<button class="mt-2 text-primary font-label-sm text-label-sm font-bold flex items-center gap-1 hover:underline" onclick="addToBagNotification('Suede Penny Loafers')">
+              Grab Deal <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. "Recently Viewed" -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Recently Viewed by You</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Jump back into your recent wardrobe discoveries.</p>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md">Clear History</button>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-gutter-sm">
+<div class="bg-surface-container-lowest p-2 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<div class="aspect-square rounded overflow-hidden bg-surface-container mb-2">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Men's textured knit polo in ecru white folded with subtle weave detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwha9msEfdvlkllcVklND-YlpaDWApGVG9bdI5TwdZWKK1AmbxsAlVzaNktC3azlXL4496AKJAGen0o4QiUYw7rBfVenVFisjFwXttYm1jNC-LKi2HHgFuL7oKJGfupQ-6e2hAnxQbPRTy0ZgDcMmsfs18gDiDr-dQUruWtH3fk_IAQkvglkPTN5pzWVbkkZPpOclGu9m1sfZFv6zVSrscooW_LXOVmh6f0HCz8U9Tsc_3bYpcVfbINg"/>
+</div>
+<p class="font-title-md text-[13px] font-semibold text-on-surface truncate">Ecru Waffle Polo</p>
+<p class="font-label-sm text-label-sm text-primary font-bold">₹1,799</p>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<div class="aspect-square rounded overflow-hidden bg-surface-container mb-2">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Men's slim tapered light olive chino pants on studio hanger." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7AVTb2M6Jkc9MKW2mdZ23ZSQQqbnDVIbG8TmMk3IylliKLQlCb93l1oUAZajuMJWAHSKIDNRSOazXM1O2RZNBsQB4yTSrCPMznZL1rlty_VK-WkuAjrt6-OUlAgdtN8Li6-BIhv3etikHWiYQr6uYGGmO7pKwBSAy_vlkK0liLzETDnhXkY5yyoqk6TMlovEJ9HJ3x8OjxQ8kxielguLQ_BFOsMsnZIAZ4vUOxospVdAr2KIoKfhRkw"/>
+</div>
+<p class="font-title-md text-[13px] font-semibold text-on-surface truncate">Olive Chino Slim</p>
+<p class="font-label-sm text-label-sm text-primary font-bold">₹2,499</p>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<div class="aspect-square rounded overflow-hidden bg-surface-container mb-2">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Sleek silver dial minimalist dress watch with brown calfskin leather band." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRm0tcRQwIpOyEs_jbaRetpakvKJyr8MevcJMMx0ZcyWQxx-LEc8C1um9MNZ-Eob66I6hfvDOe4iyefi8oTzZecpPmFkmnookAYPozWtWND1FynmULAepuBIRJ6tWPOeE3zwEbiGECSNvvh1b4tLivSxtstHwIh8CI6hOvQKNayZOpRTRzOuuMjtJBZsb4Jd_XKskrQaJgoD1cwh1DYEHpwud2pWcLB6fPgw0V-cgOoaBkwf-c7fnxLQ"/>
+</div>
+<p class="font-title-md text-[13px] font-semibold text-on-surface truncate">Classic 38mm Watch</p>
+<p class="font-label-sm text-label-sm text-primary font-bold">₹4,200</p>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<div class="aspect-square rounded overflow-hidden bg-surface-container mb-2">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Camp collar short sleeve navy floral understated resort shirt laid flat." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpx6BOTQhNXkAS1gf7LxXOGYLgQcd0jKO9186IiVJ91JxuFQHMIzJFol43RtSnrlwZYrLBW1UUoOWt68_KHBHxQIO2JPrp5ej8aZyhN7-PW9PvwCfDrUtLEfwJbw_s1rV45usZt0s4XMGjJdmtAV5-PT9bHRGSd9d0pMwDTqFptAkx424UicON6vOnaAOE960c4wosD0Hdw7IcSssGH1AZr3xtZbKRWfnGLTsmqT9ENG36S3OX-yLIpg"/>
+</div>
+<p class="font-title-md text-[13px] font-semibold text-on-surface truncate">Navy Resort Shirt</p>
+<p class="font-label-sm text-label-sm text-primary font-bold">₹2,199</p>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<div class="aspect-square rounded overflow-hidden bg-surface-container mb-2">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Cognac brown woven leather loafers photographed from top angle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ8V1MSszbrjgf-CLHUbFnwRTLkbuTYPeJK9StsP-iLQ0y_uBu35Xb9xk_B7QKXw6xNpvxQkAfUjJ2rG50D5IZ-XbHlTR_Ab-15TfP9yFIcSd2HriQzee3TsGne2xLbH3XBi4nWffkVYOtilb58gw0k6tfahfo_15ghXMo7xcNdNrS01B1_7RAA-BaY8K0B_p-lblJk50yRRO6G4iwQe0ZeXxcRAVU3pytG0gc5RFAgLBtfqk8LJqIuQ"/>
+</div>
+<p class="font-title-md text-[13px] font-semibold text-on-surface truncate">Woven Slip-On</p>
+<p class="font-label-sm text-label-sm text-primary font-bold">₹3,499</p>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<div class="aspect-square rounded overflow-hidden bg-surface-container mb-2">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Off-white unstructured chore jacket in heavy durable cotton canvas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJovZFY4EQVoo-GQ-NNlEzwzZqr2MljFBvSE72fD9uTUPA6SJWMiWKAPy_tOw5dyJANEgb_F4BlrJN1tDP6v9by-JJQyqx4SQWy_mKOqDQpmCCmsTA20JXX7jDxGxAarnJwnEmDShCVYyni57ixH9_k0w6q8wqX7QJjU8vJ_o1v2tP-JqswR5Rdh8pcjomIR4xxth2iwcyvfPFZkIFN033YicmJMUJxkMe03WXh5kkdkMgQUuoSSbl7g"/>
+</div>
+<p class="font-title-md text-[13px] font-semibold text-on-surface truncate">Chalk Chore Jacket</p>
+<p class="font-label-sm text-label-sm text-primary font-bold">₹3,999</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Interactive Style Quiz Modal (Hidden by default) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4 hidden" id="quiz-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-space-lg shadow-2xl space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">tune</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Refine Style Profile</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high" onclick="toggleQuizModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<p class="font-body-md text-body-md text-on-surface-variant">Update your primary dressing occasion preference:</p>
+<div class="grid grid-cols-2 gap-2">
+<button class="p-3 rounded-lg bg-surface-container-high text-left font-label-md text-label-md text-primary font-bold">
+            Casual Sophistication (Current)
+          </button>
+<button class="p-3 rounded-lg bg-surface-container text-left font-label-md text-label-md text-on-surface hover:bg-surface-container-high">
+            Business Minimalist
+          </button>
+<button class="p-3 rounded-lg bg-surface-container text-left font-label-md text-label-md text-on-surface hover:bg-surface-container-high">
+            Streetwear Modern
+          </button>
+<button class="p-3 rounded-lg bg-surface-container text-left font-label-md text-label-md text-on-surface hover:bg-surface-container-high">
+            Weekend Leisure
+          </button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">Preferred Silhouette Cut:</p>
+<div class="flex gap-2">
+<button class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">Relaxed Straight</button>
+<button class="px-4 py-2 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">Slim Fit</button>
+<button class="px-4 py-2 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">Oversized</button>
+</div>
+</div>
+<div class="pt-space-xs flex justify-end gap-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md" onclick="toggleQuizModal()">Cancel</button>
+<button class="px-5 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold" onclick="saveQuizPreferences()">Save &amp; Re-calculate Fits</button>
+</div>
+</div>
+</div>
+<!-- Interactive Toast Notification -->
+<div class="fixed top-24 right-6 z-50 transform translate-y-[-100px] opacity-0 transition-all duration-300 pointer-events-none" id="toast">
+<div class="bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed text-[22px]">check_circle</span>
+<div>
+<p class="font-title-md text-body-md font-bold" id="toast-title">Added to Bag</p>
+<p class="font-body-sm text-[12px] text-surface-dim" id="toast-msg">Item added successfully in your calibrated size.</p>
+</div>
+</div>
+</div>
+<!-- Interactive AI Assistant Floating Prompt Card -->
+<div class="fixed bottom-24 right-6 z-40 max-w-sm w-full p-4 rounded-2xl bg-surface-container-lowest/95 backdrop-blur-xl shadow-2xl transition-all duration-300" id="stylist-prompt">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[16px]">neurology</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-primary font-bold uppercase tracking-wider">Style AI Stylist</span>
+<h5 class="font-title-md text-body-sm font-bold text-on-surface">Match Detected for Rahul</h5>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="document.getElementById('stylist-prompt').remove()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant">
+      "Hey Rahul! I found 3 new jackets that match your <span class="font-semibold text-on-surface">Warm Sand Trousers</span>. Want to view them?"
+    </p>
+<div class="mt-3 flex gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold" onclick="showJacketsQuickView()">
+        Show Jackets
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm" onclick="document.getElementById('stylist-prompt').remove()">
+        Maybe Later
+      </button>
+</div>
+</div>
+</div>
+<script>
+  function addToBagNotification(itemName) {
+    const toast = document.getElementById('toast');
+    document.getElementById('toast-title').innerText = itemName + ' Added';
+    document.getElementById('toast-msg').innerText = 'Size M added to your shopping bag.';
+    toast.classList.remove('translate-y-[-100px]', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.add('translate-y-[-100px]', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 2800);
+  }
+
+  function addBundleToBag() {
+    const btn = document.getElementById('bundle-btn');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span> Added All 3 to Bag!';
+    btn.classList.remove('bg-primary');
+    btn.classList.add('bg-tertiary-container');
+    addToBagNotification('Terrace Ensemble (3-Pieces)');
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">shopping_bag</span> Add Entire Look to Bag (3 Items)';
+      btn.classList.add('bg-primary');
+      btn.classList.remove('bg-tertiary-container');
+    }, 3000);
+  }
+
+  function toggleQuizModal() {
+    const modal = document.getElementById('quiz-modal');
+    modal.classList.toggle('hidden');
+  }
+
+  function saveQuizPreferences() {
+    toggleQuizModal();
+    const toast = document.getElementById('toast');
+    document.getElementById('toast-title').innerText = 'AI Profile Updated';
+    document.getElementById('toast-msg').innerText = 'Re-ranked 18 looks based on your updated preferences.';
+    toast.classList.remove('translate-y-[-100px]', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.add('translate-y-[-100px]', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3000);
+  }
+
+  function setGenderView(gender) {
+    if (gender === 'female') {
+      alert('Gender routing simulation: In production this navigates to the Women\'s Curated Studio (user.gender = "female"). Currently viewing Rahul\'s active Men\'s profile.');
+    }
+  }
+
+  function showJacketsQuickView() {
+    const el = document.getElementById('recommended-for-you');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('stylist-prompt').remove();
+    }
+  }
+
+  // Simple countdown simulation
+  let totalSecs = 11 * 3600 + 42 * 60 + 18;
+  setInterval(() => {
+    if (totalSecs > 0) {
+      totalSecs--;
+      const h = Math.floor(totalSecs / 3600);
+      const m = Math.floor((totalSecs % 3600) / 60);
+      const s = totalSecs % 60;
+      const el = document.getElementById('countdown');
+      if (el) {
+        el.innerText = `${h}h : ${m < 10 ? '0' : ''}${m}m : ${s < 10 ? '0' : ''}${s}s`;
+      }
+    }
+  }, 1000);
+</script></main><aside class="fixed bottom-6 right-6 z-50"><button class="group flex items-center gap-space-sm pl-space-md pr-space-lg py-3 rounded-full bg-primary-container text-on-primary shadow-[0_16px_32px_-4px_rgba(30,30,36,0.16)] hover:bg-primary transition-all duration-300 hover:scale-105 active:scale-95"><div class="relative flex items-center justify-center w-7 h-7 rounded-full bg-white/20 text-on-primary"><span class="material-symbols-outlined text-[18px] group-hover:rotate-12 transition-transform">neurology</span><span class="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-ping"></span></div><div class="flex flex-col text-left"><span class="font-label-sm text-[10px] text-on-primary-container uppercase tracking-wider leading-none">Smart Stylist</span><span class="font-title-md text-body-md font-bold leading-tight">Ask Style AI</span></div><span class="material-symbols-outlined text-[18px] text-on-primary-container group-hover:translate-x-0.5 transition-transform">arrow_back_ios_new</span></button></aside><footer class="w-full bg-surface-container-low mt-space-2xl"><div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin-lg pt-space-2xl pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg pb-space-2xl"><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Shop Men</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="#">AI Tailored Suits</a></li><li><a class="hover:text-primary transition-colors" href="#">Casual Oxford Shirts</a></li><li><a class="hover:text-primary transition-colors" href="#">Slim Chinos &amp; Trousers</a></li><li><a class="hover:text-primary transition-colors" href="#">Italian Leather Loafers</a></li><li><a class="hover:text-primary transition-colors" href="#">Luxe Outerwear</a></li><li><a class="hover:text-primary transition-colors" href="#">Minimalist Watches</a></li></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Shop Women</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="#">Editorial Dresses</a></li><li><a class="hover:text-primary transition-colors" href="#">Tailored Blazers</a></li><li><a class="hover:text-primary transition-colors" href="#">Silk Tops &amp; Blouses</a></li><li><a class="hover:text-primary transition-colors" href="#">Contemporary Handbags</a></li><li><a class="hover:text-primary transition-colors" href="#">Fine Jewelry</a></li><li><a class="hover:text-primary transition-colors" href="#">Footwear Collection</a></li></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Customer Care</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="#">Track Your Order</a></li><li><a class="hover:text-primary transition-colors" href="#">AI Sizing &amp; Fit Guide</a></li><li><a class="hover:text-primary transition-colors" href="#">Easy Returns &amp; Exchanges</a></li><li><a class="hover:text-primary transition-colors" href="#">Express Shipping Info</a></li><li><a class="hover:text-primary transition-colors" href="#">Contact Concierge</a></li><li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">StyleHub AI Engine</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="#">Style AI Assistant</a></li><li><a class="hover:text-primary transition-colors" href="#">Visual Wardrobe Matching</a></li><li><a class="hover:text-primary transition-colors" href="#">Predictive Trend Forecaster</a></li><li><a class="hover:text-primary transition-colors" href="#">Color Harmony Matrix</a></li><li><a class="hover:text-primary transition-colors" href="#">Occasion Capsule Builder</a></li></ul></div><div class="flex flex-col gap-space-md"><div class="flex flex-col gap-space-xs"><h3 class="font-title-md text-title-md text-on-surface">Stay Ahead of Trends</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Receive personalized lookbooks and curated drops generated for your taste.</p></div><form class="flex flex-col gap-space-xs"><div class="relative"><input class="w-full h-11 px-space-md bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm font-body-sm rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Enter your email" type="email"/><button class="absolute right-1 top-1 bottom-1 px-space-md bg-primary text-on-primary font-label-md text-label-md rounded-md hover:bg-primary-container transition-colors" type="submit">Join</button></div><span class="font-label-sm text-[11px] text-outline">By subscribing you agree to our Terms &amp; Privacy Policy.</span></form><div class="flex items-center gap-space-sm pt-space-xs"><a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">play_circle</span></a></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[16px]">shopping_bag</span></div><span class="font-label-md text-label-md text-on-surface font-semibold">StyleHub Inc. © 2025</span><span>• All Rights Reserved</span></div><div class="flex items-center gap-space-md flex-wrap"><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" href="#">Security</a><a class="hover:text-on-surface transition-colors" href="#">Cookie Preferences</a></div><div class="flex items-center gap-space-xs text-outline"><span class="material-symbols-outlined text-[22px]">credit_card</span><span class="material-symbols-outlined text-[22px]">lock</span><span class="material-symbols-outlined text-[22px]">verified_user</span></div></div></div></footer></body></html>

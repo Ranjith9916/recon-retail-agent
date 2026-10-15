@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StyleHub - Men's Product Detail Page</title>
+<!-- Tailwind CSS v3 with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              berry: '#b81d5b',
+              berryHover: '#9e184d',
+              berryLight: '#fdf2f7',
+              dark: '#1e1e24',
+              surface: '#fafafa',
+              border: '#f0f0f2',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style data-purpose="custom-scroll">
+    /* Subtle custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #e2e2e8;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c5c5cf;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased font-sans min-h-screen flex flex-col">
+<!-- BEGIN: AnnouncementBar -->
+<div class="bg-brand-berry text-white text-xs py-2 px-4 flex justify-between items-center text-center font-medium tracking-wide">
+<div class="mx-auto flex items-center space-x-3">
+<span>✨ Free Express Delivery on orders above ₹499</span>
+<span class="text-pink-200">•</span>
+<span>AI Personal Stylist Active</span>
+<span class="text-pink-200">•</span>
+<span>100% Safe Payments</span>
+</div>
+<div class="hidden md:flex items-center space-x-2 text-[11px] font-semibold">
+<span class="bg-white text-brand-berry px-2 py-0.5 rounded">Men</span>
+<span class="opacity-75 hover:opacity-100 cursor-pointer">Women</span>
+</div>
+</div>
+<!-- END: AnnouncementBar -->
+<!-- BEGIN: MainHeader -->
+<header class="bg-white border-b border-gray-200 sticky top-0 z-40">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16 gap-6">
+<!-- Logo -->
+<div class="flex items-center gap-3">
+<a class="flex items-center gap-2 group" href="#">
+<div class="w-9 h-9 rounded-xl bg-brand-berry flex items-center justify-center text-white shadow-sm transition-transform group-hover:scale-105">
+<i class="fa-solid fa-bag-shopping text-lg"></i>
+</div>
+<div>
+<span class="text-2xl font-black tracking-tight text-gray-900 block leading-tight">StyleHub</span>
+<span class="text-[9px] uppercase tracking-widest text-gray-400 font-semibold block">Fashion For A Better You</span>
+</div>
+</a>
+</div>
+<!-- Delivery Location & Search Bar -->
+<div class="hidden lg:flex items-center gap-4 flex-1 max-w-2xl">
+<!-- Delivery badge -->
+<div class="flex items-center gap-2 text-xs text-gray-600 bg-gray-50 border border-gray-200 px-3 py-2 rounded-lg shrink-0 cursor-pointer hover:bg-gray-100 transition">
+<i class="fa-solid fa-location-dot text-brand-berry"></i>
+<div>
+<span class="text-[10px] text-gray-400 block leading-none">Deliver to</span>
+<span class="font-semibold text-gray-800">Rahul • Mumbai 400050</span>
+</div>
+</div>
+<!-- Search Input -->
+<div class="relative w-full">
+<i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+<input class="w-full pl-10 pr-20 py-2.5 bg-gray-50 border border-gray-200 text-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-brand-berry focus:border-brand-berry text-gray-800 placeholder-gray-400" placeholder="Search for slim shirts, linen blazers, sneakers..." type="text"/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2 text-gray-400">
+<button class="hover:text-brand-berry transition"><i class="fa-solid fa-microphone text-sm"></i></button>
+<button class="hover:text-brand-berry transition"><i class="fa-solid fa-camera text-sm"></i></button>
+</div>
+</div>
+</div>
+<!-- User Actions & Context -->
+<div class="flex items-center gap-5 shrink-0">
+<button class="relative p-2 text-gray-600 hover:text-brand-berry transition">
+<i class="fa-regular fa-heart text-xl"></i>
+<span class="absolute top-1 right-1 w-4 h-4 bg-brand-berry text-white text-[10px] font-bold rounded-full flex items-center justify-center">3</span>
+</button>
+<button class="relative p-2 text-gray-600 hover:text-brand-berry transition">
+<i class="fa-solid fa-bag-shopping text-xl"></i>
+<span class="absolute top-1 right-1 w-4 h-4 bg-brand-berry text-white text-[10px] font-bold rounded-full flex items-center justify-center">1</span>
+</button>
+<div class="border-l border-gray-200 pl-4 flex items-center gap-3">
+<img alt="Rahul Avatar" class="w-9 h-9 rounded-full object-cover border-2 border-brand-berry" src="https://lh3.googleusercontent.com/aida/AEtjO1W6mbxkMzq2Zy8x7hD9O_sQ0c0bfvHSmJRWuh-YRD5ReR6LSpv2ahNxPkUANpumAE-wnz66sU_MPq4hY3b3JAcP6DAUKA_O0oGqY3vPJGUDFDauNSXOw3Oqv0GgaVlVeDMBgIrRpAQ-qCaXbVEbLQSa1p_VuEM2hYkGYIQnEWQkVNyk-5AxRGO5dkLB-zFfoqIk9oQntuKmon5SCAmh7t5WWelMXkHn0GTm6eJzoI2juCIOEZB7m15QF7km"/>
+<div class="hidden sm:block text-left">
+<span class="text-xs font-semibold text-gray-800 block">Hi, Rahul</span>
+<span class="text-[10px] uppercase tracking-wider font-bold text-brand-berry bg-pink-50 px-1.5 py-0.5 rounded">Men's Profile</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Context Sync Status Strip -->
+<div class="py-2 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 overflow-x-auto">
+<div class="flex items-center gap-3 shrink-0">
+<span class="bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-[10px] font-mono tracking-tight font-semibold">PROFILE SYNC</span>
+<span class="text-gray-600">Context: <strong class="text-gray-800">user.gender = "male" (Active)</strong></span>
+<span class="text-gray-300">•</span>
+<span>Personalization Engine: <span class="text-brand-berry font-medium">Mediterranean Summer / Mumbai Edit</span></span>
+</div>
+<div class="flex items-center gap-2 shrink-0 ml-4">
+<span class="text-[11px] text-gray-400">Switch Persona View:</span>
+<a class="px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-berry text-white" href="#">Men's (Active)</a>
+<a class="px-2 py-0.5 rounded text-[11px] font-medium text-gray-600 hover:text-brand-berry" href="#">Women's Studio</a>
+</div>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: BreadcrumbNavigation -->
+<nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200 py-3">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<ol class="flex items-center space-x-2 text-xs text-gray-500">
+<li><a class="hover:text-brand-berry transition" href="#">Home</a></li>
+<li><i class="fa-solid fa-chevron-right text-[10px] text-gray-400"></i></li>
+<li><a class="hover:text-brand-berry transition" href="#">Men</a></li>
+<li><i class="fa-solid fa-chevron-right text-[10px] text-gray-400"></i></li>
+<li><a class="hover:text-brand-berry transition" href="#">Shirts &amp; Polos</a></li>
+<li><i class="fa-solid fa-chevron-right text-[10px] text-gray-400"></i></li>
+<li><a class="hover:text-brand-berry transition" href="#">Bespoke Casuals</a></li>
+<li><i class="fa-solid fa-chevron-right text-[10px] text-gray-400"></i></li>
+<li aria-current="page" class="font-semibold text-gray-800 truncate">Italian Linen Resort Shirt</li>
+</ol>
+</div>
+</nav>
+<!-- END: BreadcrumbNavigation -->
+<!-- BEGIN: MainContent -->
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- BEGIN: ProductImageGallery (Left 7 Cols) -->
+<section aria-label="Product Image Gallery" class="lg:col-span-7 flex flex-col-reverse md:flex-row gap-4">
+<!-- Thumbnail strip -->
+<div class="flex md:flex-col gap-3 overflow-x-auto md:overflow-y-auto md:w-24 shrink-0 pb-2 md:pb-0" data-purpose="thumbnails">
+<button class="relative rounded-xl overflow-hidden border-2 border-brand-berry ring-2 ring-brand-berry/20 w-20 h-24 shrink-0 focus:outline-none transition group">
+<img alt="Front Open Layered View" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/AEtjO1W6mbxkMzq2Zy8x7hD9O_sQ0c0bfvHSmJRWuh-YRD5ReR6LSpv2ahNxPkUANpumAE-wnz66sU_MPq4hY3b3JAcP6DAUKA_O0oGqY3vPJGUDFDauNSXOw3Oqv0GgaVlVeDMBgIrRpAQ-qCaXbVEbLQSa1p_VuEM2hYkGYIQnEWQkVNyk-5AxRGO5dkLB-zFfoqIk9oQntuKmon5SCAmh7t5WWelMXkHn0GTm6eJzoI2juCIOEZB7m15QF7km"/>
+<span class="absolute inset-0 bg-black/10 group-hover:bg-transparent"></span>
+</button>
+<button class="relative rounded-xl overflow-hidden border border-gray-200 hover:border-brand-berry w-20 h-24 shrink-0 focus:outline-none transition group">
+<img alt="Slub Linen Fabric Texture" class="w-full h-full object-cover scale-150 group-hover:scale-125 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1W6mbxkMzq2Zy8x7hD9O_sQ0c0bfvHSmJRWuh-YRD5ReR6LSpv2ahNxPkUANpumAE-wnz66sU_MPq4hY3b3JAcP6DAUKA_O0oGqY3vPJGUDFDauNSXOw3Oqv0GgaVlVeDMBgIrRpAQ-qCaXbVEbLQSa1p_VuEM2hYkGYIQnEWQkVNyk-5AxRGO5dkLB-zFfoqIk9oQntuKmon5SCAmh7t5WWelMXkHn0GTm6eJzoI2juCIOEZB7m15QF7km"/>
+<span class="absolute inset-x-0 bottom-0 bg-black/60 text-white text-[9px] py-0.5 text-center font-medium">Texture</span>
+</button>
+<button class="relative rounded-xl overflow-hidden border border-gray-200 hover:border-brand-berry w-20 h-24 shrink-0 focus:outline-none transition group">
+<img alt="Styling with Beige Trousers" class="w-full h-full object-cover object-bottom" src="https://lh3.googleusercontent.com/aida/AEtjO1W6mbxkMzq2Zy8x7hD9O_sQ0c0bfvHSmJRWuh-YRD5ReR6LSpv2ahNxPkUANpumAE-wnz66sU_MPq4hY3b3JAcP6DAUKA_O0oGqY3vPJGUDFDauNSXOw3Oqv0GgaVlVeDMBgIrRpAQ-qCaXbVEbLQSa1p_VuEM2hYkGYIQnEWQkVNyk-5AxRGO5dkLB-zFfoqIk9oQntuKmon5SCAmh7t5WWelMXkHn0GTm6eJzoI2juCIOEZB7m15QF7km"/>
+<span class="absolute inset-x-0 bottom-0 bg-black/60 text-white text-[9px] py-0.5 text-center font-medium">Ensemble</span>
+</button>
+<button class="relative rounded-xl overflow-hidden border border-gray-200 hover:border-brand-berry w-20 h-24 shrink-0 focus:outline-none transition group flex items-center justify-center bg-gray-100">
+<div class="text-center p-1">
+<i class="fa-solid fa-play text-gray-500 text-sm mb-1 block"></i>
+<span class="text-[9px] font-bold text-gray-600 block leading-tight">Lookbook Video</span>
+</div>
+</button>
+</div>
+<!-- Large Main Display -->
+<div class="relative flex-1 rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm group">
+<!-- Main Hero Product Image -->
+<img alt="Bespoke Casuals Italian Linen Resort Shirt worn by model on terrace" class="w-full h-[620px] object-cover object-top transition duration-500 group-hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida/AEtjO1W6mbxkMzq2Zy8x7hD9O_sQ0c0bfvHSmJRWuh-YRD5ReR6LSpv2ahNxPkUANpumAE-wnz66sU_MPq4hY3b3JAcP6DAUKA_O0oGqY3vPJGUDFDauNSXOw3Oqv0GgaVlVeDMBgIrRpAQ-qCaXbVEbLQSa1p_VuEM2hYkGYIQnEWQkVNyk-5AxRGO5dkLB-zFfoqIk9oQntuKmon5SCAmh7t5WWelMXkHn0GTm6eJzoI2juCIOEZB7m15QF7km"/>
+<!-- AI Fit Match Tag -->
+<div class="absolute top-4 left-4 z-10 flex items-center gap-1.5 bg-emerald-600/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+<i class="fa-solid fa-sparkles text-[11px]"></i>
+<span>98% AI Fit Match</span>
+</div>
+<!-- Look Title Card Overlay -->
+<div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm border border-gray-200/80 px-3.5 py-2 rounded-xl text-xs shadow-md hidden sm:block">
+<p class="text-[10px] uppercase font-bold text-brand-berry tracking-wider">Rahul's Signature Look #04</p>
+<p class="font-semibold text-gray-900">The Coastal Terrace Layer</p>
+<p class="text-[11px] text-gray-500">Black Resort Slub + Supima Tee</p>
+</div>
+<!-- AI Virtual Fitting Floating CTA -->
+<button class="absolute bottom-4 right-4 bg-gray-900/90 hover:bg-black text-white text-xs font-semibold px-4 py-2.5 rounded-full backdrop-blur-md shadow-lg flex items-center gap-2 transition transform hover:scale-105 active:scale-95 border border-white/20">
+<i class="fa-solid fa-wand-magic-sparkles text-pink-400"></i>
+<span>Try On (AI Virtual Fitting)</span>
+</button>
+<!-- Image Navigation Arrows -->
+<button class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 hover:bg-white text-gray-700 rounded-full shadow-md flex items-center justify-center transition">
+<i class="fa-solid fa-chevron-left text-xs"></i>
+</button>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 hover:bg-white text-gray-700 rounded-full shadow-md flex items-center justify-center transition">
+<i class="fa-solid fa-chevron-right text-xs"></i>
+</button>
+</div>
+</section>
+<!-- END: ProductImageGallery -->
+<!-- BEGIN: ProductPurchaseSuite (Right 5 Cols) -->
+<section aria-label="Product Information &amp; Ordering" class="lg:col-span-5 flex flex-col justify-between">
+<div class="space-y-6">
+<!-- Brand & Header -->
+<div class="border-b border-gray-100 pb-5">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-wider text-brand-berry bg-pink-50 px-2 py-0.5 rounded">Bespoke Casuals</span>
+<div class="flex items-center gap-3">
+<button class="text-gray-400 hover:text-brand-berry transition p-1" title="Save to Wishlist">
+<i class="fa-regular fa-heart text-lg"></i>
+</button>
+<button class="text-gray-400 hover:text-gray-800 transition p-1" title="Share Outfit">
+<i class="fa-solid fa-arrow-up-from-bracket text-base"></i>
+</button>
+</div>
+</div>
+<h1 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 tracking-tight">Italian Linen Resort Shirt</h1>
+<div class="flex items-center gap-3 mt-2.5">
+<div class="flex items-center bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded text-xs font-bold">
+<i class="fa-solid fa-star text-[10px] mr-1"></i>
+<span>4.9</span>
+</div>
+<span class="text-xs text-gray-500 font-medium">340 verified reviews</span>
+<span class="text-gray-300">•</span>
+<span class="text-xs text-brand-berry font-semibold flex items-center gap-1">
+<i class="fa-solid fa-fire text-[11px]"></i> Trending in Mumbai
+              </span>
+</div>
+<!-- Price Container -->
+<div class="mt-4 flex items-baseline gap-3">
+<span class="text-3xl font-extrabold text-gray-950">₹2,499</span>
+<span class="text-sm text-gray-400 line-through">₹4,999</span>
+<span class="text-xs font-bold uppercase tracking-wide bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">50% OFF</span>
+</div>
+<p class="text-[11px] text-gray-400 mt-1">Inclusive of all taxes &amp; import duties</p>
+</div>
+<!-- Swatches / Color Picker -->
+<div data-purpose="color-selector">
+<div class="flex items-center justify-between text-xs mb-2.5">
+<span class="font-semibold text-gray-700">Color: <span class="text-gray-900 font-normal">Deep Onyx Black (Featured)</span></span>
+<span class="text-[11px] text-gray-400">4 Shades Available</span>
+</div>
+<div class="flex items-center gap-3">
+<!-- Deep Onyx (Active) -->
+<button class="w-8 h-8 rounded-full bg-stone-900 ring-2 ring-offset-2 ring-brand-berry transition-transform scale-110 relative" title="Deep Onyx Black">
+<i class="fa-solid fa-check text-[10px] text-white absolute inset-0 m-auto flex items-center justify-center"></i>
+</button>
+<!-- Olive Mist -->
+<button class="w-8 h-8 rounded-full bg-[#5c6352] hover:scale-105 transition ring-1 ring-gray-300" title="Olive Mist"></button>
+<!-- Mediterranean Sand -->
+<button class="w-8 h-8 rounded-full bg-[#c9b79c] hover:scale-105 transition ring-1 ring-gray-300" title="Mediterranean Sand"></button>
+<!-- Chalk White -->
+<button class="w-8 h-8 rounded-full bg-[#f4f4f4] hover:scale-105 transition ring-1 ring-gray-300" title="Chalk White"></button>
+</div>
+</div>
+<!-- Size Selector & AI Sizing Helper -->
+<div data-purpose="size-selector">
+<div class="flex items-center justify-between text-xs mb-2.5">
+<span class="font-semibold text-gray-700">Select Size:</span>
+<button class="text-brand-berry hover:text-brand-berryHover font-semibold text-xs flex items-center gap-1 transition">
+<i class="fa-solid fa-ruler-combined text-[11px]"></i>
+<span>AI Sizing Predictor (Rahul's Fit: M)</span>
+</button>
+</div>
+<div class="grid grid-cols-5 gap-2">
+<button class="py-2.5 border border-gray-200 rounded-lg text-xs font-semibold text-gray-600 hover:border-gray-400 transition">S</button>
+<!-- M (In Your Size) -->
+<button class="relative py-2.5 border-2 border-brand-berry bg-brand-berryLight text-brand-berry rounded-lg text-xs font-bold transition shadow-xs">
+<span>M</span>
+<span class="absolute -top-2 left-1/2 -translate-x-1/2 bg-brand-berry text-white text-[8px] uppercase tracking-wider font-bold px-1.5 py-0.2 rounded-full whitespace-nowrap">Your Fit</span>
+</button>
+<button class="py-2.5 border border-gray-200 rounded-lg text-xs font-semibold text-gray-600 hover:border-gray-400 transition">L</button>
+<button class="py-2.5 border border-gray-200 rounded-lg text-xs font-semibold text-gray-600 hover:border-gray-400 transition">XL</button>
+<button class="py-2.5 border border-gray-200 rounded-lg text-xs font-semibold text-gray-400 cursor-not-allowed bg-gray-50 opacity-60">XXL</button>
+</div>
+<!-- Personalized fit recommendation banner -->
+<div class="mt-3 bg-pink-50/70 border border-pink-100 rounded-lg p-2.5 flex items-start gap-2.5 text-xs text-gray-700">
+<i class="fa-solid fa-sparkles text-brand-berry mt-0.5 text-xs shrink-0"></i>
+<p class="leading-relaxed">
+                Based on your <strong class="text-gray-900">39" chest measurement</strong> and relaxed layering preference, <strong class="text-brand-berry">Size M</strong> delivers the optimal tailored drape shown in the photo.
+              </p>
+</div>
+</div>
+<!-- Quantity and Action Buttons -->
+<div class="pt-2 space-y-3">
+<div class="flex items-center gap-3">
+<!-- Quantity Stepper -->
+<div class="flex items-center border border-gray-300 rounded-xl bg-white px-3 py-2 shrink-0">
+<button class="text-gray-400 hover:text-gray-700 px-1 font-bold text-sm">-</button>
+<span class="px-3 font-semibold text-sm text-gray-800">1</span>
+<button class="text-gray-400 hover:text-gray-700 px-1 font-bold text-sm">+</button>
+</div>
+<!-- Add to Cart CTA -->
+<button class="flex-1 py-3 px-4 border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white rounded-xl text-sm font-semibold transition flex items-center justify-center gap-2">
+<i class="fa-solid fa-bag-shopping text-sm"></i>
+<span>Add to Cart</span>
+</button>
+<!-- Buy Now CTA -->
+<button class="flex-1 py-3 px-4 bg-brand-berry hover:bg-brand-berryHover text-white rounded-xl text-sm font-semibold transition shadow-md shadow-pink-900/20 flex items-center justify-center gap-2">
+<i class="fa-solid fa-bolt text-xs"></i>
+<span>Buy Now</span>
+</button>
+</div>
+</div>
+<!-- BEGIN: AI Recommendation Reasoning Card -->
+<div class="bg-gradient-to-br from-pink-50/60 via-white to-gray-50 border border-pink-100 rounded-2xl p-4 shadow-xs" data-purpose="ai-insight-box">
+<div class="flex items-center gap-2 mb-3">
+<div class="w-6 h-6 rounded-full bg-brand-berry text-white flex items-center justify-center text-xs shadow-xs">
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+</div>
+<h3 class="font-bold text-xs uppercase tracking-wider text-brand-berry">Why Style AI Recommends This For Rahul?</h3>
+</div>
+<ul class="space-y-2 text-xs text-gray-600">
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-circle-check text-emerald-600 text-xs mt-0.5 shrink-0"></i>
+<span>Matches your preferred style affinity: <strong class="text-gray-800">Mediterranean Casual &amp; Smart Layers</strong>.</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-circle-check text-emerald-600 text-xs mt-0.5 shrink-0"></i>
+<span>Open-weave pure linen designed specifically for <strong class="text-gray-800">Mumbai's humid 29°C climate</strong>.</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-circle-check text-emerald-600 text-xs mt-0.5 shrink-0"></i>
+<span>Direct harmonic match with your saved <strong class="text-gray-800">Tailored Pleated Trousers (Warm Sand)</strong>.</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-circle-check text-emerald-600 text-xs mt-0.5 shrink-0"></i>
+<span><strong class="text-gray-800">99% fit satisfaction</strong> across customers with your exact shoulder proportions.</span>
+</li>
+</ul>
+</div>
+<!-- END: AI Recommendation Reasoning Card -->
+<!-- Value Assurances Grid -->
+<div class="grid grid-cols-2 gap-3 pt-2 text-xs text-gray-600 border-t border-gray-100">
+<div class="flex items-center gap-2.5 p-2 rounded-lg bg-gray-50">
+<i class="fa-solid fa-truck-fast text-brand-berry text-base"></i>
+<div>
+<span class="font-semibold text-gray-800 block leading-tight">Free Delivery</span>
+<span class="text-[10px] text-gray-500">Tomorrow by 2:00 PM</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-2 rounded-lg bg-gray-50">
+<i class="fa-solid fa-rotate-left text-brand-berry text-base"></i>
+<div>
+<span class="font-semibold text-gray-800 block leading-tight">7-Day Free Returns</span>
+<span class="text-[10px] text-gray-500">Doorstep pickup &amp; swap</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-2 rounded-lg bg-gray-50">
+<i class="fa-solid fa-certificate text-brand-berry text-base"></i>
+<div>
+<span class="font-semibold text-gray-800 block leading-tight">100% Slub Linen</span>
+<span class="text-[10px] text-gray-500">Normandy flax certified</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-2 rounded-lg bg-gray-50">
+<i class="fa-solid fa-shield-halved text-brand-berry text-base"></i>
+<div>
+<span class="font-semibold text-gray-800 block leading-tight">Secure Payment</span>
+<span class="text-[10px] text-gray-500">UPI, Cards &amp; NetBanking</span>
+</div>
+</div>
+</div>
+<!-- Product Details Accordion Section -->
+<div class="border-t border-gray-200 pt-4 space-y-3">
+<details class="group" open="">
+<summary class="flex justify-between items-center font-semibold text-xs text-gray-900 cursor-pointer list-none">
+<span>Product Specifications &amp; Fabric</span>
+<span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-gray-400 text-xs"></i></span>
+</summary>
+<div class="text-xs text-gray-600 mt-2 space-y-1.5 leading-relaxed pl-1">
+<p>• <strong>Material:</strong> 100% Pure Italian Slub Flax Linen (190 GSM)</p>
+<p>• <strong>Fit:</strong> Relaxed Resort fit, engineered for open layered or buttoned wear</p>
+<p>• <strong>Collar:</strong> Camp / Cuban revere collar with reinforced stitching</p>
+<p>• <strong>Buttons:</strong> Hand-crafted iridescent mother-of-pearl closures</p>
+<p>• <strong>Care:</strong> Gentle cold machine wash, line dry in shade, warm steam iron</p>
+</div>
+</details>
+</div>
+</div>
+</section>
+<!-- END: ProductPurchaseSuite -->
+</div>
+<!-- BEGIN: CompleteTheLookAI -->
+<section aria-label="Complete The Look Recommendation" class="mt-16 pt-10 border-t border-gray-200">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-6">
+<div>
+<div class="flex items-center gap-2">
+<span class="bg-brand-berry text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide uppercase">AI Curated Ensemble</span>
+<span class="text-xs text-emerald-600 font-semibold flex items-center gap-1">
+<i class="fa-solid fa-check-double"></i> 98% Compatibility Score
+            </span>
+</div>
+<h2 class="text-xl font-bold text-gray-900 mt-1">Complete "The Sun-Drenched Terrace" Outfit</h2>
+<p class="text-xs text-gray-500">Specially paired items calibrated to your Mediterranean styling preferences</p>
+</div>
+<div class="mt-3 md:mt-0 flex items-center gap-2">
+<span class="text-xs text-gray-500">Bundle Discount: <strong class="text-emerald-600 font-bold">Extra 15% Off</strong></span>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-xs">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+<!-- Item 1: This Resort Shirt -->
+<div class="flex items-center gap-3 p-2 rounded-xl bg-pink-50/50 border border-brand-berry/20 relative">
+<span class="absolute -top-2 -left-2 bg-brand-berry text-white text-[9px] font-bold px-1.5 py-0.5 rounded">Selected</span>
+<img alt="Resort Shirt" class="w-16 h-20 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida/AEtjO1W6mbxkMzq2Zy8x7hD9O_sQ0c0bfvHSmJRWuh-YRD5ReR6LSpv2ahNxPkUANpumAE-wnz66sU_MPq4hY3b3JAcP6DAUKA_O0oGqY3vPJGUDFDauNSXOw3Oqv0GgaVlVeDMBgIrRpAQ-qCaXbVEbLQSa1p_VuEM2hYkGYIQnEWQkVNyk-5AxRGO5dkLB-zFfoqIk9oQntuKmon5SCAmh7t5WWelMXkHn0GTm6eJzoI2juCIOEZB7m15QF7km"/>
+<div class="text-xs">
+<p class="font-bold text-gray-800 line-clamp-1">Italian Linen Resort Shirt</p>
+<p class="text-gray-500 text-[11px]">Size: M • Deep Onyx</p>
+<p class="font-semibold text-gray-900 mt-1">₹2,499</p>
+</div>
+</div>
+<!-- Plus Sign -->
+<div class="hidden md:flex justify-center text-gray-300 font-light text-xl">+</div>
+<!-- Item 2: Pleated Trousers -->
+<div class="flex items-center gap-3 p-2 rounded-xl border border-gray-100 hover:border-gray-300 transition">
+<div class="w-16 h-20 bg-amber-100/50 rounded-lg flex items-center justify-center text-amber-800 text-xs font-semibold overflow-hidden">
+<img alt="Tailored Pleated Trousers" class="w-full h-full object-cover object-bottom" src="https://lh3.googleusercontent.com/aida/AEtjO1W6mbxkMzq2Zy8x7hD9O_sQ0c0bfvHSmJRWuh-YRD5ReR6LSpv2ahNxPkUANpumAE-wnz66sU_MPq4hY3b3JAcP6DAUKA_O0oGqY3vPJGUDFDauNSXOw3Oqv0GgaVlVeDMBgIrRpAQ-qCaXbVEbLQSa1p_VuEM2hYkGYIQnEWQkVNyk-5AxRGO5dkLB-zFfoqIk9oQntuKmon5SCAmh7t5WWelMXkHn0GTm6eJzoI2juCIOEZB7m15QF7km"/>
+</div>
+<div class="text-xs">
+<p class="font-bold text-gray-800 line-clamp-1">Tailored Pleated Trousers</p>
+<p class="text-gray-500 text-[11px]">Size: 32 • Warm Sand</p>
+<p class="font-semibold text-gray-900 mt-1">₹2,899</p>
+</div>
+</div>
+<!-- Plus Sign -->
+<div class="hidden md:flex justify-center text-gray-300 font-light text-xl">+</div>
+<!-- Item 3: Supima Crewneck -->
+<div class="flex items-center gap-3 p-2 rounded-xl border border-gray-100 hover:border-gray-300 transition">
+<div class="w-16 h-20 bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 text-xs overflow-hidden">
+<img alt="Chalk White Supima Crewneck" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1W6mbxkMzq2Zy8x7hD9O_sQ0c0bfvHSmJRWuh-YRD5ReR6LSpv2ahNxPkUANpumAE-wnz66sU_MPq4hY3b3JAcP6DAUKA_O0oGqY3vPJGUDFDauNSXOw3Oqv0GgaVlVeDMBgIrRpAQ-qCaXbVEbLQSa1p_VuEM2hYkGYIQnEWQkVNyk-5AxRGO5dkLB-zFfoqIk9oQntuKmon5SCAmh7t5WWelMXkHn0GTm6eJzoI2juCIOEZB7m15QF7km"/>
+</div>
+<div class="text-xs">
+<p class="font-bold text-gray-800 line-clamp-1">Organic Supima Tee</p>
+<p class="text-gray-500 text-[11px]">Size: M • Chalk White</p>
+<p class="font-semibold text-gray-900 mt-1">₹799</p>
+</div>
+</div>
+<!-- Bundle Action Box -->
+<div class="md:col-span-4 lg:col-span-4 bg-gray-50 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 mt-2">
+<div class="text-center sm:text-left">
+<span class="text-xs text-gray-500 block">Combined Value: <span class="line-through text-gray-400">₹6,197</span></span>
+<span class="text-xl font-extrabold text-gray-950">₹4,999 <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">You Save ₹1,198</span></span>
+</div>
+<button class="w-full sm:w-auto px-6 py-3 bg-brand-berry hover:bg-brand-berryHover text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 shadow-sm">
+<i class="fa-solid fa-layer-group"></i>
+<span>Add Entire 3-Piece Look to Cart</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CompleteTheLookAI -->
+<!-- BEGIN: CustomerReviewsSummary -->
+<section aria-label="Customer Reviews" class="mt-16 pt-10 border-t border-gray-200">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h2 class="text-xl font-bold text-gray-900">Verified Fit &amp; Fabric Reviews</h2>
+<p class="text-xs text-gray-500">Aggregated from verified buyers in Mumbai and coastal regions</p>
+</div>
+<button class="text-xs font-semibold text-brand-berry hover:underline">Write a Review</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Review 1 -->
+<div class="bg-white border border-gray-200 rounded-xl p-4 shadow-xs">
+<div class="flex items-center justify-between text-xs mb-2">
+<span class="font-bold text-gray-800">Karan M.</span>
+<span class="text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded font-semibold">Verified Buyer (Size M)</span>
+</div>
+<div class="text-amber-400 text-xs mb-2">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p class="text-xs text-gray-600 leading-relaxed">
+            "The weave on this shirt is surprisingly breezy. Wore it unbuttoned over a white t-shirt for a sundowner in Bandra — exactly like the model picture. Size M fits true to chest."
+          </p>
+</div>
+<!-- Review 2 -->
+<div class="bg-white border border-gray-200 rounded-xl p-4 shadow-xs">
+<div class="flex items-center justify-between text-xs mb-2">
+<span class="font-bold text-gray-800">Vikramaditya S.</span>
+<span class="text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded font-semibold">Verified Buyer (Size L)</span>
+</div>
+<div class="text-amber-400 text-xs mb-2">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p class="text-xs text-gray-600 leading-relaxed">
+            "Genuine flax linen. Has that authentic natural slub texture and mother of pearl buttons are a subtle luxury finish. Doesn’t wrinkle excessively either."
+          </p>
+</div>
+<!-- Review 3 -->
+<div class="bg-white border border-gray-200 rounded-xl p-4 shadow-xs">
+<div class="flex items-center justify-between text-xs mb-2">
+<span class="font-bold text-gray-800">Sameer R.</span>
+<span class="text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded font-semibold">Verified Buyer (Size M)</span>
+</div>
+<div class="text-amber-400 text-xs mb-2">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<p class="text-xs text-gray-600 leading-relaxed">
+            "AI sizing predictor got it spot on. Was debating between S and M, but the M gives that clean relaxed drop on the shoulders without looking baggy."
+          </p>
+</div>
+</div>
+</section>
+<!-- END: CustomerReviewsSummary -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-[#111115] text-gray-300 text-xs mt-20 border-t border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+<!-- Col 1: Shop Men -->
+<div>
+<h4 class="font-semibold text-white uppercase tracking-wider text-[11px] mb-3">Shop Men</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a class="hover:text-white transition" href="#">Italian Tailored Suits</a></li>
+<li><a class="hover:text-white transition" href="#">Casual Resort Shirts</a></li>
+<li><a class="hover:text-white transition" href="#">Pleated Chinos &amp; Trousers</a></li>
+<li><a class="hover:text-white transition" href="#">Italian Leather Loafers</a></li>
+<li><a class="hover:text-white transition" href="#">Minimalist Chronographs</a></li>
+</ul>
+</div>
+<!-- Col 2: Shop Women -->
+<div>
+<h4 class="font-semibold text-white uppercase tracking-wider text-[11px] mb-3">Shop Women</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a class="hover:text-white transition" href="#">Floral Maxi Dresses</a></li>
+<li><a class="hover:text-white transition" href="#">Silk Tops &amp; Blouses</a></li>
+<li><a class="hover:text-white transition" href="#">Contemporary Handbags</a></li>
+<li><a class="hover:text-white transition" href="#">Fine Footwear</a></li>
+<li><a class="hover:text-white transition" href="#">Occasion Wear</a></li>
+</ul>
+</div>
+<!-- Col 3: Customer Care -->
+<div>
+<h4 class="font-semibold text-white uppercase tracking-wider text-[11px] mb-3">Customer Care</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a class="hover:text-white transition" href="#">Track Your Order</a></li>
+<li><a class="hover:text-white transition" href="#">AI Sizing &amp; Fit Guide</a></li>
+<li><a class="hover:text-white transition" href="#">Easy Returns &amp; Exchanges</a></li>
+<li><a class="hover:text-white transition" href="#">Express Shipping Info</a></li>
+<li><a class="hover:text-white transition" href="#">Contact Personal Concierge</a></li>
+</ul>
+</div>
+<!-- Col 4: StyleHub AI -->
+<div>
+<h4 class="font-semibold text-white uppercase tracking-wider text-[11px] mb-3">StyleHub AI Engine</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a class="hover:text-white transition" href="#">Style AI Assistant</a></li>
+<li><a class="hover:text-white transition" href="#">Visual Wardrobe Matching</a></li>
+<li><a class="hover:text-white transition" href="#">Predictive Trend Forecaster</a></li>
+<li><a class="hover:text-white transition" href="#">Occasion Capsule Builder</a></li>
+</ul>
+</div>
+<!-- Col 5: Newsletter & App -->
+<div class="col-span-2 md:col-span-1">
+<h4 class="font-semibold text-white uppercase tracking-wider text-[11px] mb-3">Stay Ahead of Trends</h4>
+<p class="text-gray-400 text-[11px] mb-3">Receive curated drops matched to your personal fit profile.</p>
+<div class="flex">
+<input class="w-full bg-gray-800 border-0 text-white text-xs px-3 py-2 rounded-l-lg focus:ring-1 focus:ring-brand-berry focus:outline-none placeholder-gray-500" placeholder="Enter your email" type="email"/>
+<button class="bg-brand-berry hover:bg-brand-berryHover text-white px-3 py-2 rounded-r-lg font-semibold text-xs transition shrink-0">Join</button>
+</div>
+<div class="flex items-center gap-3 mt-4 text-gray-400">
+<a class="hover:text-white transition" href="#"><i class="fa-brands fa-instagram text-base"></i></a>
+<a class="hover:text-white transition" href="#"><i class="fa-brands fa-twitter text-base"></i></a>
+<a class="hover:text-white transition" href="#"><i class="fa-brands fa-pinterest text-base"></i></a>
+</div>
+</div>
+</div>
+<!-- Copyright & Bottom Links -->
+<div class="border-t border-gray-800/80 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between text-gray-500 text-[11px]">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 rounded bg-brand-berry flex items-center justify-center text-white text-[8px]">
+<i class="fa-solid fa-bag-shopping"></i>
+</div>
+<span>StyleHub Inc. © 2025 • All Rights Reserved</span>
+</div>
+<div class="flex items-center space-x-4 mt-3 sm:mt-0">
+<a class="hover:text-gray-300 transition" href="#">Privacy Policy</a>
+<a class="hover:text-gray-300 transition" href="#">Terms of Service</a>
+<a class="hover:text-gray-300 transition" href="#">Security</a>
+<a class="hover:text-gray-300 transition" href="#">Cookie Preferences</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- BEGIN: StickyMobileAIAssistant -->
+<aside class="fixed bottom-4 right-4 z-50">
+<button class="bg-brand-berry hover:bg-brand-berryHover text-white px-4 py-2.5 rounded-full shadow-xl flex items-center gap-2 text-xs font-bold transition transform hover:scale-105 active:scale-95 border border-pink-400/30">
+<i class="fa-solid fa-sparkles text-pink-200 animate-pulse"></i>
+<span>Smart Stylist: Ask Style AI</span>
+<span class="w-2 h-2 bg-emerald-400 rounded-full animate-ping"></span>
+</button>
+</aside>
+<!-- END: StickyMobileAIAssistant -->
+</body></html>

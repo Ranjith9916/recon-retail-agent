@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StyleHub - Women's Fashion Made Personal</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fdf2f7',
+              100: '#fce7f0',
+              200: '#fbcfe3',
+              500: '#b81d5b',
+              600: '#9d144c',
+              700: '#830f3f',
+              800: '#680c32',
+            },
+            surface: {
+              DEFAULT: '#fbf9f6',
+              dim: '#dbdad7',
+              low: '#f5f3f0',
+              lowest: '#ffffff',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            script: ['Caveat', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom styling for fine-tuned details -->
+<style data-purpose="custom-elements">
+    .script-font {
+      font-family: 'Caveat', cursive;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #e5e7eb;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-[#fcfaf7] text-gray-800 font-sans antialiased selection:bg-brand-50 selection:text-brand-500">
+<!-- BEGIN: TopNotificationContext -->
+<!-- Context bar demonstrating logged-in female user state & preview toggle -->
+<aside class="bg-stone-900 text-stone-200 text-xs py-1.5 px-4" data-purpose="user-context-banner">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span>Personalized Experience: <strong>user.gender = 'female' (Active)</strong></span>
+<span class="hidden md:inline text-stone-400">| Curated for Ananya Sharma (Bengaluru)</span>
+</div>
+<div class="flex items-center space-x-3">
+<a class="hover:text-white transition-colors underline decoration-dotted text-stone-300" href="#toggle-mode">Preview Men's Catalog</a>
+<span>•</span>
+<a class="hover:text-white transition-colors" href="#support">Help &amp; Contact</a>
+</div>
+</div>
+</aside>
+<!-- END: TopNotificationContext -->
+<!-- BEGIN: MainHeader -->
+<header class="bg-white border-b border-gray-100 sticky top-0 z-40 shadow-sm" data-purpose="site-navigation-header">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Logo and Brand Tagline -->
+<div class="flex items-center space-x-8">
+<a class="flex items-center gap-2 group" href="#">
+<div class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<span class="text-2xl font-serif font-bold tracking-tight text-gray-900">Style<span class="text-brand-500">Hub</span></span>
+<span class="block text-[10px] text-gray-400 tracking-wider uppercase font-medium">Fashion for a better you</span>
+</div>
+</a>
+</div>
+<!-- Search Bar -->
+<div class="hidden md:flex flex-1 max-w-xl mx-8">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<input class="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-full text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:bg-white transition-all" placeholder="Search for products, brands, categories..." type="text"/>
+</div>
+</div>
+<!-- Right Icons & Profile -->
+<div class="flex items-center space-x-6">
+<!-- Wishlist -->
+<a class="relative p-1 text-gray-700 hover:text-brand-500 transition-colors" href="#wishlist" title="Wishlist">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+<span class="absolute -top-1 -right-1.5 bg-brand-500 text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">2</span>
+</a>
+<!-- Cart -->
+<a class="relative p-1 text-gray-700 hover:text-brand-500 transition-colors" href="#cart" title="Shopping Bag">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+<span class="absolute -top-1 -right-1.5 bg-brand-500 text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">2</span>
+</a>
+<!-- User Profile Dropdown -->
+<div class="flex items-center space-x-3 cursor-pointer pl-2 border-l border-gray-100">
+<div class="relative">
+<img alt="User Avatar" class="w-9 h-9 rounded-full object-cover object-top border-2 border-brand-500 shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1WXjLs1YtR2H5QdqiMMSNG6ttIzj_t-Nt1RJ4tMMfkeAf6dcQOoAF79G5GxezNH4h_H5dq8wa7Nn930xMje2tJWm3XeVJpxl_S6IJesIO1wqSpMO9iCFVrvdbQWwhx4VqSLltd3JOQ9LSaZX485buqVxhSnj-pBCT7diqPVk_a4sCVljAIoTKPzhTEHQO1LX06Y0-ycWS87ulu9jxoO6TpXajpvarNHpT6vu9rcDjgw2CZC93IDMlKPfU0"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-white rounded-full"></span>
+</div>
+<div class="hidden lg:flex flex-col text-left">
+<span class="text-xs font-semibold text-gray-800 flex items-center gap-1">
+                Hi, Ananya
+                <svg class="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+<span class="text-[10px] text-brand-600 font-medium">Style VIP</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Categories Secondary Navigation Bar -->
+<nav class="flex items-center space-x-8 border-t border-gray-100 py-3 text-sm font-medium">
+<a class="text-gray-500 hover:text-gray-900 transition-colors" href="#men">Men</a>
+<a class="text-brand-500 border-b-2 border-brand-500 pb-3 -mb-3 font-semibold flex items-center gap-1" href="#women">
+          Women
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-500 inline-block"></span>
+</a>
+<a class="text-gray-500 hover:text-gray-900 transition-colors" href="#kids">Kids</a>
+<a class="text-gray-500 hover:text-gray-900 transition-colors" href="#beauty">Beauty</a>
+<a class="text-gray-500 hover:text-gray-900 transition-colors" href="#homeliving">Home &amp; Living</a>
+<a class="text-gray-500 hover:text-gray-900 transition-colors" href="#brands">Brands</a>
+<a class="text-rose-600 hover:text-rose-700 font-semibold flex items-center gap-1" href="#offers">
+          Offers
+          <span class="text-[10px] bg-rose-100 text-rose-700 px-1.5 py-0.5 rounded font-bold">HOT</span>
+</a>
+</nav>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-10">
+<!-- BEGIN: HeroBanner -->
+<!-- Women's Fashion Made Personal hero section featuring https://lh3.googleusercontent.com/aida/AEtjO1WXjLs1YtR2H5QdqiMMSNG6ttIzj_t-Nt1RJ4tMMfkeAf6dcQOoAF79G5GxezNH4h_H5dq8wa7Nn930xMje2tJWm3XeVJpxl_S6IJesIO1wqSpMO9iCFVrvdbQWwhx4VqSLltd3JOQ9LSaZX485buqVxhSnj-pBCT7diqPVk_a4sCVljAIoTKPzhTEHQO1LX06Y0-ycWS87ulu9jxoO6TpXajpvarNHpT6vu9rcDjgw2CZC93IDMlKPfU0 -->
+<section class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#fae5e7] via-[#f7d9dd] to-[#f4d1d6] shadow-sm border border-pink-100" data-purpose="hero-promotional-card">
+<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[460px] items-center">
+<!-- Left Content -->
+<div class="lg:col-span-7 p-8 sm:p-12 z-10 space-y-6">
+<div class="space-y-2">
+<span class="font-serif italic text-lg sm:text-xl text-gray-700 block tracking-wide">For Every You</span>
+<h1 class="font-sans text-3xl sm:text-5xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
+              Women's Fashion<br/>
+<span class="text-brand-500">Made Personal</span>
+</h1>
+<p class="text-gray-600 text-base sm:text-lg max-w-md pt-1">
+              Trendy styles, handpicked for your taste, skin tone, and body silhouette.
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center justify-center px-7 py-3.5 bg-gray-900 hover:bg-black text-white text-sm font-semibold rounded-full shadow-lg shadow-gray-900/10 transition duration-200 transform hover:-translate-y-0.5" href="#shop-women">
+              Shop Women
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+<a class="inline-flex items-center justify-center px-6 py-3.5 bg-white/80 hover:bg-white text-brand-600 border border-brand-200 text-sm font-semibold rounded-full shadow-sm transition" href="#ai-stylist">
+              View Style Quiz (92% Match)
+            </a>
+</div>
+<!-- Hand-written flair comment -->
+<div class="pt-4 flex items-center gap-2 text-stone-600">
+<span class="script-font text-2xl text-brand-600 font-semibold transform -rotate-3">Look Good Feel Amazing ♡</span>
+</div>
+</div>
+<!-- Right Hero Image with Floating AI Card -->
+<div class="lg:col-span-5 relative h-full flex justify-center lg:justify-end items-end">
+<div class="relative w-full max-w-md h-[420px] lg:h-[480px]">
+<img alt="Model in blush floral dress" class="w-full h-full object-cover object-top rounded-b-3xl lg:rounded-b-none lg:rounded-tl-3xl shadow-lg shadow-pink-900/10" src="https://lh3.googleusercontent.com/aida/AEtjO1WXjLs1YtR2H5QdqiMMSNG6ttIzj_t-Nt1RJ4tMMfkeAf6dcQOoAF79G5GxezNH4h_H5dq8wa7Nn930xMje2tJWm3XeVJpxl_S6IJesIO1wqSpMO9iCFVrvdbQWwhx4VqSLltd3JOQ9LSaZX485buqVxhSnj-pBCT7diqPVk_a4sCVljAIoTKPzhTEHQO1LX06Y0-ycWS87ulu9jxoO6TpXajpvarNHpT6vu9rcDjgw2CZC93IDMlKPfU0"/>
+<!-- Floating AI Stylist Badge Card -->
+<div class="absolute top-6 -left-4 sm:left-4 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-white/60 flex items-center space-x-3 transition-transform hover:scale-105">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-pink-400 text-white flex items-center justify-center shadow-md shadow-brand-500/30">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<p class="text-xs font-bold text-gray-900">AI Stylist</p>
+<p class="text-[11px] text-gray-500 font-medium">Find your perfect look with AI ✨</p>
+</div>
+</div>
+<!-- Bottom Floating Trend Tag -->
+<div class="absolute bottom-6 right-6 bg-gray-900/85 backdrop-blur text-white px-3 py-1.5 rounded-full text-xs font-medium flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
+              Floral Edit 2025
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroBanner -->
+<!-- BEGIN: ValuePropositionBar -->
+<!-- Trust features strip matching the StyleHub UI -->
+<section class="bg-white rounded-2xl p-5 border border-stone-100 shadow-sm" data-purpose="value-proposition-strip">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-100 text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start space-x-3.5 px-3 py-2">
+<div class="w-10 h-10 rounded-full bg-brand-50 text-brand-500 flex items-center justify-center shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<h4 class="text-xs font-bold text-gray-900">Free Delivery</h4>
+<p class="text-[11px] text-gray-500">On orders above ₹499</p>
+</div>
+</div>
+<div class="flex items-center justify-center md:justify-start space-x-3.5 px-3 py-2">
+<div class="w-10 h-10 rounded-full bg-brand-50 text-brand-500 flex items-center justify-center shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<h4 class="text-xs font-bold text-gray-900">Easy Returns</h4>
+<p class="text-[11px] text-gray-500">7-day hassle free</p>
+</div>
+</div>
+<div class="flex items-center justify-center md:justify-start space-x-3.5 px-3 py-2">
+<div class="w-10 h-10 rounded-full bg-brand-50 text-brand-500 flex items-center justify-center shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<h4 class="text-xs font-bold text-gray-900">Secure Payments</h4>
+<p class="text-[11px] text-gray-500">100% safe &amp; secure</p>
+</div>
+</div>
+<div class="flex items-center justify-center md:justify-start space-x-3.5 px-3 py-2">
+<div class="w-10 h-10 rounded-full bg-brand-50 text-brand-500 flex items-center justify-center shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<h4 class="text-xs font-bold text-gray-900">Personalized Picks</h4>
+<p class="text-[11px] text-gray-500">Just for you</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ValuePropositionBar -->
+<!-- BEGIN: QuickCategoryPills -->
+<!-- Category shortcuts with icon circles -->
+<section class="py-2" data-purpose="quick-category-navigation">
+<div class="flex items-center justify-between overflow-x-auto custom-scrollbar pb-3 gap-6">
+<a class="group flex flex-col items-center shrink-0 space-y-2 text-center" href="#dresses">
+<div class="w-16 h-16 rounded-full bg-pink-100/70 border-2 border-brand-500/20 group-hover:border-brand-500 transition-all flex items-center justify-center p-1 overflow-hidden shadow-sm">
+<span class="text-2xl">👗</span>
+</div>
+<span class="text-xs font-semibold text-gray-800 group-hover:text-brand-500 transition-colors">Dresses</span>
+</a>
+<a class="group flex flex-col items-center shrink-0 space-y-2 text-center" href="#tops">
+<div class="w-16 h-16 rounded-full bg-purple-50 border-2 border-transparent group-hover:border-brand-500 transition-all flex items-center justify-center p-1 overflow-hidden shadow-sm">
+<span class="text-2xl">👚</span>
+</div>
+<span class="text-xs font-medium text-gray-700 group-hover:text-brand-500 transition-colors">Tops</span>
+</a>
+<a class="group flex flex-col items-center shrink-0 space-y-2 text-center" href="#kurtas">
+<div class="w-16 h-16 rounded-full bg-amber-50 border-2 border-transparent group-hover:border-brand-500 transition-all flex items-center justify-center p-1 overflow-hidden shadow-sm">
+<span class="text-2xl">👘</span>
+</div>
+<span class="text-xs font-medium text-gray-700 group-hover:text-brand-500 transition-colors">Kurtas &amp; Sets</span>
+</a>
+<a class="group flex flex-col items-center shrink-0 space-y-2 text-center" href="#sarees">
+<div class="w-16 h-16 rounded-full bg-rose-50 border-2 border-transparent group-hover:border-brand-500 transition-all flex items-center justify-center p-1 overflow-hidden shadow-sm">
+<span class="text-2xl">🥻</span>
+</div>
+<span class="text-xs font-medium text-gray-700 group-hover:text-brand-500 transition-colors">Sarees</span>
+</a>
+<a class="group flex flex-col items-center shrink-0 space-y-2 text-center" href="#jeans">
+<div class="w-16 h-16 rounded-full bg-blue-50 border-2 border-transparent group-hover:border-brand-500 transition-all flex items-center justify-center p-1 overflow-hidden shadow-sm">
+<span class="text-2xl">👖</span>
+</div>
+<span class="text-xs font-medium text-gray-700 group-hover:text-brand-500 transition-colors">Jeans</span>
+</a>
+<a class="group flex flex-col items-center shrink-0 space-y-2 text-center" href="#activewear">
+<div class="w-16 h-16 rounded-full bg-emerald-50 border-2 border-transparent group-hover:border-brand-500 transition-all flex items-center justify-center p-1 overflow-hidden shadow-sm">
+<span class="text-2xl">🧘‍♀️</span>
+</div>
+<span class="text-xs font-medium text-gray-700 group-hover:text-brand-500 transition-colors">Activewear</span>
+</a>
+<a class="group flex flex-col items-center shrink-0 space-y-2 text-center" href="#innerwear">
+<div class="w-16 h-16 rounded-full bg-peach-50 bg-orange-50 border-2 border-transparent group-hover:border-brand-500 transition-all flex items-center justify-center p-1 overflow-hidden shadow-sm">
+<span class="text-2xl">🩱</span>
+</div>
+<span class="text-xs font-medium text-gray-700 group-hover:text-brand-500 transition-colors">Innerwear</span>
+</a>
+<a class="group flex flex-col items-center shrink-0 space-y-2 text-center" href="#footwear">
+<div class="w-16 h-16 rounded-full bg-yellow-50 border-2 border-transparent group-hover:border-brand-500 transition-all flex items-center justify-center p-1 overflow-hidden shadow-sm">
+<span class="text-2xl">👠</span>
+</div>
+<span class="text-xs font-medium text-gray-700 group-hover:text-brand-500 transition-colors">Footwear</span>
+</a>
+<a class="group flex flex-col items-center shrink-0 space-y-2 text-center" href="#handbags">
+<div class="w-16 h-16 rounded-full bg-amber-50 border-2 border-transparent group-hover:border-brand-500 transition-all flex items-center justify-center p-1 overflow-hidden shadow-sm">
+<span class="text-2xl">👜</span>
+</div>
+<span class="text-xs font-medium text-gray-700 group-hover:text-brand-500 transition-colors">Handbags</span>
+</a>
+<a class="group flex flex-col items-center shrink-0 space-y-2 text-center" href="#beauty">
+<div class="w-16 h-16 rounded-full bg-red-50 border-2 border-transparent group-hover:border-brand-500 transition-all flex items-center justify-center p-1 overflow-hidden shadow-sm">
+<span class="text-2xl">💄</span>
+</div>
+<span class="text-xs font-medium text-gray-700 group-hover:text-brand-500 transition-colors">Beauty</span>
+</a>
+</div>
+</section>
+<!-- END: QuickCategoryPills -->
+<!-- BEGIN: RecommendedProductsSection -->
+<!-- 6 Products matching reference https://lh3.googleusercontent.com/aida-public/AB6AXuCLeB98RRWyFayFjYLR1JE65F3ZVEoHQO-6Eb-qSymGHKmy3pbEkg3tMvN4XmbgD6nLtPRnX4xVSS26FDf4lqJnYE9iS98PeeCOPLNAMfntFvXUOKbvQ4fEIdDmnUrn8wbqMiN7HFISRxJwIWftLM5q8ZM0O_oQ2ClfAlPLkaGtp999XtYGiwablF3ZfvAQxGNE1zUB87Yz4tbdMHJY-lYo3sRnmtMvw7HzKX77Z5QWaeMSi4MP1g9b4bDJ6y-qOYBwhO0 top-left screen -->
+<section class="space-y-4" data-purpose="recommended-product-grid">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-xl font-bold text-gray-900 tracking-tight flex items-center gap-2">
+            Recommended For You
+            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-brand-50 text-brand-500 border border-brand-100">
+              AI Curated
+            </span>
+</h2>
+<p class="text-xs text-gray-500">Based on your recent browsing of floral midis and relaxed brunch wear</p>
+</div>
+<a class="text-brand-500 hover:text-brand-700 text-sm font-semibold flex items-center gap-1 group" href="#all-recommended">
+          See All
+          <span class="group-hover:translate-x-1 transition-transform">→</span>
+</a>
+</div>
+<!-- Grid of 6 Recommended Products -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Product 1: Libas Floral Maxi Dress -->
+<article class="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-xs hover:shadow-md transition duration-200 flex flex-col">
+<div class="relative aspect-[3/4] bg-stone-100 overflow-hidden">
+<img alt="Libas Floral Maxi Dress" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1WXjLs1YtR2H5QdqiMMSNG6ttIzj_t-Nt1RJ4tMMfkeAf6dcQOoAF79G5GxezNH4h_H5dq8wa7Nn930xMje2tJWm3XeVJpxl_S6IJesIO1wqSpMO9iCFVrvdbQWwhx4VqSLltd3JOQ9LSaZX485buqVxhSnj-pBCT7diqPVk_a4sCVljAIoTKPzhTEHQO1LX06Y0-ycWS87ulu9jxoO6TpXajpvarNHpT6vu9rcDjgw2CZC93IDMlKPfU0"/>
+<button aria-label="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-brand-500 flex items-center justify-center shadow-sm backdrop-blur transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="absolute bottom-2 left-2 bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded shadow-xs">
+              25% OFF
+            </div>
+<div class="absolute top-2 left-2 bg-purple-600/90 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded backdrop-blur">
+              98% AI Match
+            </div>
+</div>
+<div class="p-3 flex-1 flex flex-col justify-between">
+<div>
+<p class="text-[11px] font-semibold text-gray-500 uppercase tracking-wide">Libas</p>
+<h3 class="text-xs font-medium text-gray-800 line-clamp-1 group-hover:text-brand-500 transition-colors">Floral Maxi Dress</h3>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="text-sm font-bold text-gray-900">₹1,799</span>
+<span class="text-[11px] text-gray-400 line-through">₹2,399</span>
+</div>
+</div>
+<div class="mt-2 pt-2 border-t border-gray-50 flex items-center justify-between text-[11px] text-gray-500">
+<span class="flex items-center text-amber-500 font-semibold">★ 4.5</span>
+<span>(1.2k)</span>
+</div>
+</div>
+</article>
+<!-- Product 2: SASSAFRAS Ribbed Top -->
+<article class="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-xs hover:shadow-md transition duration-200 flex flex-col">
+<div class="relative aspect-[3/4] bg-stone-100 overflow-hidden flex items-center justify-center text-stone-400">
+<!-- Representing model in olive ribbed top -->
+<div class="w-full h-full bg-gradient-to-br from-amber-50 to-stone-200 flex flex-col items-center justify-center p-4 text-center">
+<span class="text-3xl">👚</span>
+<span class="text-[10px] mt-1 font-medium text-stone-600">Olive Ribbed Knit</span>
+</div>
+<button aria-label="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-brand-500 flex items-center justify-center shadow-sm backdrop-blur transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="absolute top-2 left-2 bg-purple-600/90 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded backdrop-blur">
+              96% AI Match
+            </div>
+</div>
+<div class="p-3 flex-1 flex flex-col justify-between">
+<div>
+<p class="text-[11px] font-semibold text-gray-500 uppercase tracking-wide">SASSAFRAS</p>
+<h3 class="text-xs font-medium text-gray-800 line-clamp-1 group-hover:text-brand-500 transition-colors">Ribbed Crop Top</h3>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="text-sm font-bold text-gray-900">₹799</span>
+<span class="text-[11px] text-gray-400 line-through">₹1,299</span>
+</div>
+</div>
+<div class="mt-2 pt-2 border-t border-gray-50 flex items-center justify-between text-[11px] text-gray-500">
+<span class="flex items-center text-amber-500 font-semibold">★ 4.3</span>
+<span>(856)</span>
+</div>
+</div>
+</article>
+<!-- Product 3: Biba Anarkali Kurta Set -->
+<article class="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-xs hover:shadow-md transition duration-200 flex flex-col">
+<div class="relative aspect-[3/4] bg-stone-100 overflow-hidden flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-rose-100 to-pink-50 flex flex-col items-center justify-center p-4 text-center">
+<span class="text-3xl">👗</span>
+<span class="text-[10px] mt-1 font-medium text-rose-800">Crimson Anarkali</span>
+</div>
+<button aria-label="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-brand-500 flex items-center justify-center shadow-sm backdrop-blur transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="absolute bottom-2 left-2 bg-amber-50 text-amber-700 text-[10px] font-bold px-2 py-0.5 rounded shadow-xs">
+              30% OFF
+            </div>
+<div class="absolute top-2 left-2 bg-purple-600/90 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded backdrop-blur">
+              97% AI Match
+            </div>
+</div>
+<div class="p-3 flex-1 flex flex-col justify-between">
+<div>
+<p class="text-[11px] font-semibold text-gray-500 uppercase tracking-wide">Biba</p>
+<h3 class="text-xs font-medium text-gray-800 line-clamp-1 group-hover:text-brand-500 transition-colors">Anarkali Kurta Set</h3>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="text-sm font-bold text-gray-900">₹2,299</span>
+<span class="text-[11px] text-gray-400 line-through">₹3,999</span>
+</div>
+</div>
+<div class="mt-2 pt-2 border-t border-gray-50 flex items-center justify-between text-[11px] text-gray-500">
+<span class="flex items-center text-amber-500 font-semibold">★ 4.6</span>
+<span>(703)</span>
+</div>
+</div>
+</article>
+<!-- Product 4: H&M Wide Leg Jeans -->
+<article class="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-xs hover:shadow-md transition duration-200 flex flex-col">
+<div class="relative aspect-[3/4] bg-stone-100 overflow-hidden flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-sky-50 to-blue-100 flex flex-col items-center justify-center p-4 text-center">
+<span class="text-3xl">👖</span>
+<span class="text-[10px] mt-1 font-medium text-blue-900">Light Denim Wide</span>
+</div>
+<button aria-label="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-brand-500 flex items-center justify-center shadow-sm backdrop-blur transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="absolute top-2 left-2 bg-purple-600/90 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded backdrop-blur">
+              94% AI Match
+            </div>
+</div>
+<div class="p-3 flex-1 flex flex-col justify-between">
+<div>
+<p class="text-[11px] font-semibold text-gray-500 uppercase tracking-wide">H&amp;M</p>
+<h3 class="text-xs font-medium text-gray-800 line-clamp-1 group-hover:text-brand-500 transition-colors">Wide Leg Jeans</h3>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="text-sm font-bold text-gray-900">₹1,999</span>
+</div>
+</div>
+<div class="mt-2 pt-2 border-t border-gray-50 flex items-center justify-between text-[11px] text-gray-500">
+<span class="flex items-center text-amber-500 font-semibold">★ 4.4</span>
+<span>(642)</span>
+</div>
+</div>
+</article>
+<!-- Product 5: Zouk Handbag -->
+<article class="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-xs hover:shadow-md transition duration-200 flex flex-col">
+<div class="relative aspect-[3/4] bg-stone-100 overflow-hidden flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-stone-100 to-amber-100 flex flex-col items-center justify-center p-4 text-center">
+<span class="text-3xl">👜</span>
+<span class="text-[10px] mt-1 font-medium text-amber-900">Tan Vegan Leather</span>
+</div>
+<button aria-label="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-brand-500 flex items-center justify-center shadow-sm backdrop-blur transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="absolute top-2 left-2 bg-purple-600/90 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded backdrop-blur">
+              95% AI Match
+            </div>
+</div>
+<div class="p-3 flex-1 flex flex-col justify-between">
+<div>
+<p class="text-[11px] font-semibold text-gray-500 uppercase tracking-wide">Zouk</p>
+<h3 class="text-xs font-medium text-gray-800 line-clamp-1 group-hover:text-brand-500 transition-colors">Classic Shoulder Bag</h3>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="text-sm font-bold text-gray-900">₹4,999</span>
+</div>
+</div>
+<div class="mt-2 pt-2 border-t border-gray-50 flex items-center justify-between text-[11px] text-gray-500">
+<span class="flex items-center text-amber-500 font-semibold">★ 4.5</span>
+<span>(321)</span>
+</div>
+</div>
+</article>
+<!-- Product 6: Nike Running Shoes -->
+<article class="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-xs hover:shadow-md transition duration-200 flex flex-col">
+<div class="relative aspect-[3/4] bg-stone-100 overflow-hidden flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-stone-50 to-pink-50 flex flex-col items-center justify-center p-4 text-center">
+<span class="text-3xl">👟</span>
+<span class="text-[10px] mt-1 font-medium text-gray-700">Blush &amp; White Sneaker</span>
+</div>
+<button aria-label="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-brand-500 flex items-center justify-center shadow-sm backdrop-blur transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="absolute top-2 left-2 bg-purple-600/90 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded backdrop-blur">
+              96% AI Match
+            </div>
+</div>
+<div class="p-3 flex-1 flex flex-col justify-between">
+<div>
+<p class="text-[11px] font-semibold text-gray-500 uppercase tracking-wide">Nike</p>
+<h3 class="text-xs font-medium text-gray-800 line-clamp-1 group-hover:text-brand-500 transition-colors">Running Air Max</h3>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="text-sm font-bold text-gray-900">₹4,999</span>
+</div>
+</div>
+<div class="mt-2 pt-2 border-t border-gray-50 flex items-center justify-between text-[11px] text-gray-500">
+<span class="flex items-center text-amber-500 font-semibold">★ 4.7</span>
+<span>(980)</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- END: RecommendedProductsSection -->
+<!-- BEGIN: OutfitBuilderSection -->
+<!-- Interactive AI Look Builder: "Complete Your Look" -->
+<section class="bg-gradient-to-br from-white to-pink-50/40 rounded-3xl p-6 sm:p-8 border border-pink-100 shadow-sm space-y-6" data-purpose="ai-outfit-builder">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 uppercase tracking-wider mb-1">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Complete Your Look
+          </div>
+<h2 class="text-2xl font-serif font-bold text-gray-900">The Romantic Summer Brunch Ensemble</h2>
+<p class="text-xs text-gray-500 mt-0.5">Styled by AI Stylist based on your chosen blush chiffon midi dress.</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-200">
+<strong>15% Bundle Discount</strong> applied
+          </span>
+</div>
+</div>
+<!-- Bundle Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
+<!-- Item 1: Main Dress -->
+<div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-xs flex items-center space-x-3">
+<div class="w-16 h-20 rounded-xl overflow-hidden shrink-0 bg-stone-100">
+<img alt="Floral Dress" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/AEtjO1WXjLs1YtR2H5QdqiMMSNG6ttIzj_t-Nt1RJ4tMMfkeAf6dcQOoAF79G5GxezNH4h_H5dq8wa7Nn930xMje2tJWm3XeVJpxl_S6IJesIO1wqSpMO9iCFVrvdbQWwhx4VqSLltd3JOQ9LSaZX485buqVxhSnj-pBCT7diqPVk_a4sCVljAIoTKPzhTEHQO1LX06Y0-ycWS87ulu9jxoO6TpXajpvarNHpT6vu9rcDjgw2CZC93IDMlKPfU0"/>
+</div>
+<div class="text-xs">
+<span class="font-bold text-gray-900 block">Floral Chiffon Midi</span>
+<span class="text-gray-500 text-[11px] block">Size: M (Your Fit)</span>
+<span class="font-bold text-brand-600 mt-1 block">₹1,799</span>
+</div>
+</div>
+<!-- Plus Divider -->
+<div class="hidden md:flex justify-center text-gray-300 text-xl font-light">+</div>
+<!-- Item 2: Sling Bag -->
+<div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-xs flex items-center space-x-3">
+<div class="w-16 h-20 rounded-xl bg-amber-50 flex items-center justify-center text-2xl shrink-0">
+            👜
+          </div>
+<div class="text-xs">
+<span class="font-bold text-gray-900 block">Tan Woven Crossbody</span>
+<span class="text-gray-500 text-[11px] block">Color: Warm Nude</span>
+<span class="font-bold text-brand-600 mt-1 block">₹1,499</span>
+</div>
+</div>
+<!-- Plus Divider -->
+<div class="hidden md:flex justify-center text-gray-300 text-xl font-light">+</div>
+<!-- Item 3: Block Heels -->
+<div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-xs flex items-center space-x-3">
+<div class="w-16 h-20 rounded-xl bg-pink-50 flex items-center justify-center text-2xl shrink-0">
+            👡
+          </div>
+<div class="text-xs">
+<span class="font-bold text-gray-900 block">Nude Ankle-Strap Block</span>
+<span class="text-gray-500 text-[11px] block">Size: UK 5</span>
+<span class="font-bold text-brand-600 mt-1 block">₹1,899</span>
+</div>
+</div>
+</div>
+<!-- Action Footer for Bundle -->
+<div class="bg-white/80 backdrop-blur rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between border border-pink-100 gap-4">
+<div class="flex items-center gap-4">
+<div class="text-xs">
+<span class="text-gray-500">Total Bundle: </span>
+<span class="text-gray-400 line-through">₹5,197</span>
+<span class="text-base font-bold text-gray-900 ml-1">₹4,417</span>
+<span class="text-emerald-600 font-medium ml-1.5">(Save ₹780)</span>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<button class="w-full sm:w-auto px-6 py-2.5 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-semibold text-xs transition shadow-md shadow-brand-500/20">
+            Add Entire Look to Bag
+          </button>
+</div>
+</div>
+</section>
+<!-- END: OutfitBuilderSection -->
+</main>
+<!-- BEGIN: FloatingStylistAssistant -->
+<!-- Persistent floating AI Stylist trigger matching the design system -->
+<div class="fixed bottom-6 right-6 z-50" data-purpose="floating-ai-agent-trigger">
+<a class="group flex items-center space-x-2.5 bg-gradient-to-r from-brand-500 to-pink-600 text-white pl-4 pr-5 py-3 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300" href="#open-chat">
+<div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center animate-pulse">
+<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-xs font-bold tracking-wide">Ask Style AI ✨</span>
+</a>
+</div>
+<!-- END: FloatingStylistAssistant -->
+<!-- BEGIN: Footer -->
+<footer class="bg-stone-900 text-stone-300 mt-16 border-t border-stone-800" data-purpose="main-footer">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-8 pb-10 border-b border-stone-800 text-xs">
+<div class="col-span-2 space-y-4">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-brand-500 flex items-center justify-center text-white">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-lg font-serif font-bold text-white tracking-tight">Style<span class="text-brand-500">Hub</span></span>
+</div>
+<p class="text-stone-400 max-w-sm text-xs leading-relaxed">
+            Experience next-generation personal styling driven by conversational AI and hyper-tailored fashion recommendations.
+          </p>
+<div class="pt-1">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-800 text-stone-300 text-[11px] border border-stone-700">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              AI Recommender v3.4 Active
+            </span>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-white mb-3 uppercase tracking-wider text-[11px]">Shop Women</h4>
+<ul class="space-y-2 text-stone-400">
+<li><a class="hover:text-white transition" href="#">Floral Dresses</a></li>
+<li><a class="hover:text-white transition" href="#">Tops &amp; Blouses</a></li>
+<li><a class="hover:text-white transition" href="#">Ethnic Kurta Sets</a></li>
+<li><a class="hover:text-white transition" href="#">Denim &amp; Trousers</a></li>
+<li><a class="hover:text-white transition" href="#">Workwear Edit</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white mb-3 uppercase tracking-wider text-[11px]">AI Styling</h4>
+<ul class="space-y-2 text-stone-400">
+<li><a class="hover:text-white transition" href="#">Personal Style Profile</a></li>
+<li><a class="hover:text-white transition" href="#">Body Shape Analyzer</a></li>
+<li><a class="hover:text-white transition" href="#">Color Season Test</a></li>
+<li><a class="hover:text-white transition" href="#">Virtual Fitting Room</a></li>
+<li><a class="hover:text-white transition" href="#">Chat with Stylist</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white mb-3 uppercase tracking-wider text-[11px]">Customer Care</h4>
+<ul class="space-y-2 text-stone-400">
+<li><a class="hover:text-white transition" href="#">Order Tracking</a></li>
+<li><a class="hover:text-white transition" href="#">Easy Returns &amp; Exchanges</a></li>
+<li><a class="hover:text-white transition" href="#">Shipping Policy</a></li>
+<li><a class="hover:text-white transition" href="#">Size &amp; Fit Guide</a></li>
+<li><a class="hover:text-white transition" href="#">24x7 Help Center</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500 gap-3">
+<p>© 2025 StyleHub Fashion Technologies Inc. All rights reserved.</p>
+<div class="flex space-x-4">
+<a class="hover:text-stone-300" href="#">Privacy Policy</a>
+<a class="hover:text-stone-300" href="#">Terms of Service</a>
+<a class="hover:text-stone-300" href="#">Security</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>

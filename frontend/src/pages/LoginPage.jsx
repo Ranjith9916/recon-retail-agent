@@ -1,0 +1,388 @@
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { useStyleHub } from "../context/StyleHubContext";
+
+export default function LoginPage() {
+  const { customers, currentPersona, switchPersona } = useStyleHub();
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("rahul.verma@example.com");
+  const [password, setPassword] = useState("••••••••");
+  const [rememberMe, setRememberMe] = useState(true);
+
+  const handleLogin = (e) => {
+    e?.preventDefault();
+    // Default or current persona
+    navigate("/");
+  };
+
+  const handleSelectDemoPersona = (customerId) => {
+    switchPersona(customerId);
+    navigate("/");
+  };
+
+  return (
+    <div className="bg-[#F8F5F1] text-slate-800 font-sans min-h-screen flex flex-col justify-between selection:bg-pink-200 selection:text-pink-900 overflow-x-hidden">
+      {/* Top Main Container */}
+      <main className="w-full max-w-[1536px] mx-auto px-6 py-6 lg:px-12 lg:py-8 grid grid-cols-1 xl:grid-cols-12 gap-8 items-start relative">
+        
+        {/* LEFT EDITORIAL COLUMN */}
+        <section className="xl:col-span-6 flex flex-col justify-between space-y-7 pr-0 xl:pr-4">
+          {/* Brand Header */}
+          <div className="flex items-center space-x-3.5">
+            <div className="w-11 h-11 bg-gradient-to-br from-[#BE185D] to-[#9D174D] rounded-2xl flex items-center justify-center shadow-md shadow-pink-900/20 text-white relative">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" strokeLinecap="round" strokeLinejoin="round"></path>
+              </svg>
+              <div className="absolute inset-0 flex items-center justify-center top-3">
+                <svg className="w-2.5 h-2.5 text-white fill-white" viewBox="0 0 24 24">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <div className="flex items-center text-3xl font-extrabold tracking-tight">
+                <span className="text-slate-900">Style</span>
+                <span className="text-[#BE185D]">Hub</span>
+              </div>
+              <p className="text-xs text-slate-500 font-medium tracking-wide">Fashion for a brighter you</p>
+            </div>
+          </div>
+
+          {/* Handwritten Slogan */}
+          <div className="relative pt-1 pl-2">
+            <span className="font-handwriting text-3xl md:text-4xl text-slate-800 leading-tight block transform -rotate-2">
+              More Than Fashion<br />
+              It's You <span className="text-[#BE185D] inline-block scale-90">♡</span>
+            </span>
+          </div>
+
+          {/* Dual Editorial Cards */}
+          <div className="relative w-full rounded-[32px] overflow-hidden shadow-lg border border-stone-200">
+            <img
+              alt="StyleHub Collection - For Him and For Her"
+              className="w-full h-auto object-cover rounded-[32px]"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt7fk-c1BxDVlVcq65NBJnWogxYd7ayyYF_Gs2TqA77H205jLbElWQzecgS8End6Cu6FeGtenIQrYgNyIivC3_Ej8ThwZ19x_309Y29A2y7VdttlL0FZ2H_5u-LTI7aUKJFZljzGaDYx4_MQxgKPAlU1zESIA-IyL31ybUwokYhrSOI2MuULaraoUnnFy59yIL3QOakZqkFabk2_eLtyiadLUXonyN3Mi-_vP9g3b2rX-EXIyBMmhe_Y6lzgLsw5dHHPM"
+            />
+          </div>
+
+          {/* 4 Value Proposition Row */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-2 border-y border-stone-200/70">
+            <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+              <div className="text-slate-800 mb-1">
+                <svg className="w-6 h-6 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-6 0V4a1 1 0 011-1h4a1 1 0 011 1v3m-6 0h6m-9 7h.01M17 14h.01" strokeLinecap="round" strokeLinejoin="round"></path>
+                </svg>
+              </div>
+              <span className="text-xs font-bold text-slate-900">Free Delivery</span>
+              <span className="text-[11px] text-slate-500">on orders above ₹499</span>
+            </div>
+
+            <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+              <div className="text-slate-800 mb-1">
+                <svg className="w-6 h-6 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" strokeLinecap="round" strokeLinejoin="round"></path>
+                </svg>
+              </div>
+              <span className="text-xs font-bold text-slate-900">Easy Returns</span>
+              <span className="text-[11px] text-slate-500">7-day hassle free</span>
+            </div>
+
+            <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+              <div className="text-slate-800 mb-1">
+                <svg className="w-6 h-6 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" strokeLinecap="round" strokeLinejoin="round"></path>
+                </svg>
+              </div>
+              <span className="text-xs font-bold text-slate-900">Secure Payments</span>
+              <span className="text-[11px] text-slate-500">100% safe & secure</span>
+            </div>
+
+            <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+              <div className="text-slate-800 mb-1">
+                <svg className="w-6 h-6 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" strokeLinecap="round" strokeLinejoin="round"></path>
+                </svg>
+              </div>
+              <span className="text-xs font-bold text-slate-900">Personalized Picks</span>
+              <span className="text-[11px] text-slate-500">Just for you</span>
+            </div>
+          </div>
+
+          {/* Bottom Metrics Strip */}
+          <div className="flex flex-wrap items-center justify-between gap-4 pt-1">
+            <div className="flex items-center space-x-6">
+              <div className="border-r border-stone-300 pr-5">
+                <span className="text-xl font-bold text-slate-900">1M+</span>
+                <p className="text-[11px] text-slate-500">Happy Customers</p>
+              </div>
+              <div className="border-r border-stone-300 pr-5">
+                <span className="text-xl font-bold text-slate-900">500+</span>
+                <p className="text-[11px] text-slate-500">Top Brands</p>
+              </div>
+              <div className="border-r border-stone-300 pr-5">
+                <span className="text-xl font-bold text-slate-900">50K+</span>
+                <p className="text-[11px] text-slate-500">Latest Styles</p>
+              </div>
+              <div>
+                <div className="flex items-center space-x-1">
+                  <span className="text-xl font-bold text-slate-900">4.8</span>
+                  <span className="text-pink-600 font-bold text-sm">★</span>
+                </div>
+                <p className="text-[11px] text-slate-500">App Rating</p>
+              </div>
+            </div>
+
+            <div className="font-handwriting text-2xl text-slate-800 leading-tight transform -rotate-3 select-none">
+              Good<br />Style<br />Brighter<br />Days <span className="text-[#BE185D]">♡</span>
+            </div>
+          </div>
+        </section>
+
+        {/* FLOATING LOGIN CARD */}
+        <section className="xl:col-span-4 bg-white rounded-[32px] p-8 md:p-10 border border-slate-100 shadow-2xl flex flex-col justify-between self-center my-auto w-full max-w-lg mx-auto">
+          <div>
+            <div className="flex items-center space-x-1 text-sm font-medium text-slate-600 mb-1">
+              <span>Welcome Back</span>
+              <span className="text-base">👋</span>
+            </div>
+            <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+              Login to <span className="text-[#BE185D]">StyleHub</span>
+            </h1>
+            <p className="text-xs text-slate-500 mt-1 mb-5">
+              Continue your AI-personalized shopping journey
+            </p>
+
+            {/* Quick Demo Persona Switcher */}
+            <div className="mb-5 p-3 rounded-2xl bg-[#FBF9F6] border border-pink-100">
+              <span className="text-[10px] uppercase font-bold text-[#930044] tracking-wider block mb-2">
+                ⚡ Quick Demo Access: Select Customer Persona
+              </span>
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  onClick={() => handleSelectDemoPersona("C002")}
+                  className={`p-2.5 rounded-xl border text-left transition-all flex flex-col ${
+                    currentPersona?.id === "C002"
+                      ? "border-[#930044] bg-pink-50/50 shadow-xs"
+                      : "border-stone-200 bg-white hover:border-pink-300"
+                  }`}
+                >
+                  <span className="text-xs font-bold text-slate-900">Rahul Verma</span>
+                  <span className="text-[10px] text-slate-500">Men's Profile (C002)</span>
+                  <span className="text-[9px] text-[#00703c] font-semibold mt-1">
+                    {currentPersona?.id === "C002" ? "● Active Now" : "Switch to Rahul"}
+                  </span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleSelectDemoPersona("C001")}
+                  className={`p-2.5 rounded-xl border text-left transition-all flex flex-col ${
+                    currentPersona?.id === "C001"
+                      ? "border-[#930044] bg-pink-50/50 shadow-xs"
+                      : "border-stone-200 bg-white hover:border-pink-300"
+                  }`}
+                >
+                  <span className="text-xs font-bold text-slate-900">Priya Sharma</span>
+                  <span className="text-[10px] text-slate-500">Women's Profile (C001)</span>
+                  <span className="text-[9px] text-[#00703c] font-semibold mt-1">
+                    {currentPersona?.id === "C001" ? "● Active Now" : "Switch to Priya"}
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            {/* Form */}
+            <form className="space-y-4" onSubmit={handleLogin}>
+              <div>
+                <label className="block text-xs font-semibold text-slate-800 mb-1.5" htmlFor="email">
+                  Email Address
+                </label>
+                <div className="relative rounded-xl shadow-xs">
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" strokeLinecap="round" strokeLinejoin="round"></path>
+                    </svg>
+                  </div>
+                  <input
+                    id="email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="block w-full pl-10 pr-4 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#BE185D]/20 focus:border-[#BE185D] transition-colors"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-center justify-between mb-1.5">
+                  <label className="block text-xs font-semibold text-slate-800" htmlFor="password">
+                    Password
+                  </label>
+                  <a className="text-xs font-semibold text-[#BE185D] hover:underline" href="#">
+                    Forgot password?
+                  </a>
+                </div>
+                <div className="relative rounded-xl shadow-xs">
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" strokeLinecap="round" strokeLinejoin="round"></path>
+                    </svg>
+                  </div>
+                  <input
+                    id="password"
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="block w-full pl-10 pr-10 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#BE185D]/20 focus:border-[#BE185D] transition-colors"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="flex items-center pt-0.5">
+                <input
+                  id="remember-me"
+                  type="checkbox"
+                  checked={rememberMe}
+                  onChange={(e) => setRememberMe(e.target.checked)}
+                  className="h-4 w-4 text-[#BE185D] focus:ring-[#BE185D] border-slate-300 rounded cursor-pointer"
+                />
+                <label className="ml-2.5 block text-xs font-medium text-slate-700 select-none cursor-pointer" htmlFor="remember-me">
+                  Remember me
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full mt-2 py-3.5 px-4 bg-gradient-to-r from-[#BE185D] to-[#9D174D] hover:from-[#A2134F] hover:to-[#931147] text-white font-semibold rounded-xl text-sm shadow-md shadow-pink-800/25 flex items-center justify-center space-x-2 transition-all transform active:scale-[0.99]"
+              >
+                <span>Login as {currentPersona?.name || "User"}</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinecap="round" strokeLinejoin="round"></path>
+                </svg>
+              </button>
+            </form>
+
+            <div className="relative my-6">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-slate-200"></div>
+              </div>
+              <div className="relative flex justify-center text-[11px] uppercase tracking-wider">
+                <span className="bg-white px-3 text-slate-400 font-semibold">OR</span>
+              </div>
+            </div>
+
+            {/* Social Logins */}
+            <div className="space-y-2.5">
+              <button
+                onClick={() => handleLogin()}
+                className="w-full py-2.5 px-4 border border-slate-200 rounded-xl text-xs font-semibold text-slate-700 bg-white hover:bg-slate-50 flex items-center justify-center space-x-3 transition-colors shadow-xs"
+              >
+                <svg className="w-4 h-4" viewBox="0 0 24 24">
+                  <path d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z" fill="#4285F4"></path>
+                  <path d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z" fill="#34A853"></path>
+                  <path d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z" fill="#FBBC05"></path>
+                  <path d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z" fill="#EA4335"></path>
+                </svg>
+                <span>Continue with Google</span>
+              </button>
+
+              <button
+                onClick={() => handleLogin()}
+                className="w-full py-2.5 px-4 border border-slate-200 rounded-xl text-xs font-semibold text-slate-700 bg-white hover:bg-slate-50 flex items-center justify-center space-x-3 transition-colors shadow-xs"
+              >
+                <svg className="w-4 h-4 fill-current text-slate-900" viewBox="0 0 24 24">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0 2.85-.9.04-2 .6-2.65 1.35-.58.66-1.09 1.74-.96 2.76 1.01.08 2.07-.51 2.69-1.26z"></path>
+                </svg>
+                <span>Continue with Apple</span>
+              </button>
+            </div>
+          </div>
+
+          <div className="text-center pt-6 text-xs text-slate-600 font-medium">
+            New to StyleHub?{" "}
+            <a className="text-[#BE185D] font-bold hover:underline ml-1" href="#">
+              Create an account
+            </a>
+          </div>
+        </section>
+
+        {/* FAR RIGHT FEATURES COLUMN */}
+        <aside className="xl:col-span-2 hidden xl:flex flex-col justify-between h-full pt-6 pl-2">
+          <div className="space-y-1">
+            <h2 className="text-xl font-normal text-slate-800 leading-snug tracking-tight font-sans">
+              Your Style<br />
+              <span className="font-bold text-slate-900">Our AI</span><br />
+              A Better You
+            </h2>
+            <div className="w-8 h-1 bg-[#BE185D] rounded-full mt-3"></div>
+          </div>
+
+          <div className="space-y-8 my-auto py-8">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 rounded-full bg-pink-100/70 border border-pink-200 flex items-center justify-center text-[#BE185D] mb-2.5 shadow-xs">
+                <svg className="w-5 h-5 stroke-[1.75]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 3a3 3 0 00-3 3c0 .88.38 1.67.99 2.22L3.5 13.5A2.12 2.12 0 005 17h14a2.12 2.12 0 001.5-3.5L14.01 8.22A2.99 2.99 0 0015 6a3 3 0 00-3-3zM4 17v2a1 1 0 001 1h14a1 1 0 001-1v-2" strokeLinecap="round" strokeLinejoin="round"></path>
+                </svg>
+              </div>
+              <span className="text-xs font-semibold text-slate-700 max-w-[130px] leading-snug">
+                Personalized Recommendations
+              </span>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 rounded-full bg-pink-100/70 border border-pink-200 flex items-center justify-center text-[#BE185D] mb-2.5 shadow-xs">
+                <svg className="w-5 h-5 stroke-[1.75]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" strokeLinecap="round" strokeLinejoin="round"></path>
+                </svg>
+              </div>
+              <span className="text-xs font-semibold text-slate-700 max-w-[130px] leading-snug">
+                Styles for Every Occasion
+              </span>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 rounded-full bg-pink-100/70 border border-pink-200 flex items-center justify-center text-[#BE185D] mb-2.5 shadow-xs">
+                <svg className="w-5 h-5 stroke-[1.75]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" strokeLinecap="round" strokeLinejoin="round"></path>
+                </svg>
+              </div>
+              <span className="text-xs font-semibold text-slate-700 max-w-[130px] leading-snug">
+                Curated Just for You
+              </span>
+            </div>
+          </div>
+
+          {/* Kraft Shopping Tote Bag in Corner */}
+          <div className="relative w-36 self-center mt-4 group">
+            <div className="w-16 h-10 border-2 border-stone-400 rounded-t-full mx-auto -mb-2 z-0 relative"></div>
+            <div className="w-36 h-40 bg-gradient-to-b from-[#E7D7C8] to-[#DEC9B7] rounded-t-sm rounded-b-md shadow-lg border border-[#D5C0AC] p-3 flex flex-col justify-center items-center text-center relative z-10 transform transition-transform group-hover:rotate-1">
+              <div className="absolute inset-y-0 left-2 w-px bg-white/20"></div>
+              <div className="absolute inset-y-0 right-2 w-px bg-black/5"></div>
+              <span className="font-handwriting text-slate-800 text-lg leading-tight font-semibold">
+                Self Care<br />Looks Good<br />On You <span className="text-[#BE185D]">♡</span>
+              </span>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      {/* Legal Footer */}
+      <footer className="w-full pb-6 text-center text-xs text-slate-500">
+        <p>
+          By continuing, you agree to our{" "}
+          <a className="text-[#BE185D] hover:underline font-medium" href="#">
+            Terms of Service
+          </a>{" "}
+          and{" "}
+          <a className="text-[#BE185D] hover:underline font-medium" href="#">
+            Privacy Policy
+          </a>
+        </p>
+      </footer>
+    </div>
+  );
+}

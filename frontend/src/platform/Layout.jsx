@@ -11,6 +11,7 @@ function Icon({ name }) {
     recommendations: "M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z",
     analytics: "M4 20V10M10 20V4M16 20v-7M22 20H2",
     demo: "M8 5v14l11-7z",
+    store: "M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z M9 22V12h6v10",
     menu: "M4 6h16M4 12h16M4 18h16",
   };
   return (
@@ -74,6 +75,15 @@ export default function Layout() {
               <span className="pf-nav-demo-title">Demo</span>
               <span className="pf-nav-demo-sub">Run the agent end to end</span>
             </span>
+          </NavLink>
+
+          <p className="pf-nav-heading">Experience</p>
+          <NavLink
+            to="/store"
+            className={({ isActive }) => `pf-nav-link ${isActive ? "pf-nav-link-active" : ""}`}
+          >
+            <Icon name="store" />
+            Customer Storefront
           </NavLink>
         </nav>
       </aside>
